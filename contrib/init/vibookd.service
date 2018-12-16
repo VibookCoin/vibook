@@ -1,0 +1,26 @@
+[Unit]
+Description=ViBOOK's distributed currency daemon
+After=network.target
+
+[Service]
+User=vibook
+Group=vibook
+
+Type=forking
+PIDFile=/var/lib/vibookd/vibookd.pid
+
+ExecStart=/usr/bin/vibookd -daemon -pid=/var/lib/vibookd/vibookd.pid \
+          -conf=/etc/vibook/vibook.conf -datadir=/var/lib/vibookd
+
+ExecStop=-/usr/bin/vibook-cli -conf=/etc/vibook/vibook.conf \
+         -datadir=/var/lib/vibookd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
