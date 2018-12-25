@@ -1,0 +1,26 @@
+# /etc/conf.d/vibookd: config file for /etc/init.d/vibookd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/vibook/vibook.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/vibookd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/vibookd.pid"
+
+# Where to write vibookd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/vibookd"
+
+# User and group to own vibookd process
+#BITCOIND_USER="vibook"
+#BITCOIND_GROUP="vibook"
+
+# Path to vibookd executable
+#BITCOIND_BIN="/usr/bin/vibookd"
+
+# Nice value to run vibookd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

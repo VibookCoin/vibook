@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=ViBOOK
+Comment=ViBOOK P2P Cryptocurrency
+Comment[fr]=ViBOOK, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=ViBOOK, eşten eşe kriptografik sanal para birimi
+Exec=vibook-qt %u
+Terminal=false
+Type=Application
+Icon=vibook128
+MimeType=x-scheme-handler/vibook;
+Categories=Office;Finance;
