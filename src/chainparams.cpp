@@ -6,11 +6,14 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
+
 #include "libzerocoin/Params.h"
 #include "chainparams.h"
 #include "random.h"
 #include "util.h"
 #include "utilstrencodings.h"
+#include "net.h"
+#include "base58.h"
 
 #include <assert.h>
 
@@ -94,6 +97,7 @@ public:
     CMainParams()
     {
         networkID = CBaseChainParams::MAIN;
+        vTreasuryRewardAddress="VMqCsDCfKR8m2KDyro6cdWVkmAZ1BqpELa";
         strNetworkID = "main";
         pchMessageStart[0] = 0xd9;
         pchMessageStart[1] = 0xaa;
@@ -181,11 +185,26 @@ public:
         nBudget_Fee_Confirmations = 6; // Number of confirmations for the finalization fee
     }
 
-    const Checkpoints::CCheckpointData& Checkpoints() const
+     const Checkpoints::CCheckpointData& Checkpoints() const
     {
         return data;
     }
+    
+ 
 };
+
+std::string CChainParams::GetTreasuryRewardAddressAtHeight(int nHeight) const {
+    return vTreasuryRewardAddress;
+}
+
+CScript CChainParams::GetTreasuryRewardScriptAtHeight(int nHeight) const {
+    CBitcoinAddress address(GetTreasuryRewardAddressAtHeight(nHeight).c_str());
+    assert(address.IsValid());
+
+    CScript script = GetScriptForDestination(address.Get());
+    return script; 
+}
+
 static CMainParams mainParams;
 
 /**
