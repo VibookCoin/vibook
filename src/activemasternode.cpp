@@ -66,7 +66,7 @@ void CActiveMasternode::ManageStatus()
         } else {
             service = CService(strMasterNodeAddr);
         }
-
+		/*
         if (Params().NetworkID() == CBaseChainParams::MAIN) {
             if (service.GetPort() != 22262) {
                 notCapableReason = strprintf("Invalid port: %u - only 22262 is supported on mainnet.", service.GetPort());
@@ -78,7 +78,7 @@ void CActiveMasternode::ManageStatus()
             LogPrintf("CActiveMasternode::ManageStatus() - not capable: %s\n", notCapableReason);
             return;
         }
-
+		*/
         LogPrintf("CActiveMasternode::ManageStatus() - Checking inbound connection to '%s'\n", service.ToString());
 
         CNode* pnode = ConnectNode((CAddress)service, NULL, false);
@@ -264,7 +264,7 @@ bool CActiveMasternode::Register(std::string strService, std::string strKeyMaste
         LogPrintf("CActiveMasternode::Register() - %s\n", errorMessage);
         return false;
     }
-
+	/*
     CService service = CService(strService);
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         if (service.GetPort() != 22262) {
@@ -277,7 +277,7 @@ bool CActiveMasternode::Register(std::string strService, std::string strKeyMaste
         LogPrintf("CActiveMasternode::Register() - %s\n", errorMessage);
         return false;
     }
-
+	*/
     addrman.Add(CAddress(service), CNetAddr("127.0.0.1"), 2 * 60 * 60);
 
     return Register(vin, CService(strService), keyCollateralAddress, pubKeyCollateralAddress, keyMasternode, pubKeyMasternode, errorMessage);
