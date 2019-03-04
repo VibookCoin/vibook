@@ -1,6 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2015-2017 The PIVX developers	
+// Copyright (c) 2018 The ViBOOK developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -242,6 +243,20 @@ bool WalletModel::validateAddress(const QString& address)
     return addressParsed.IsValid();
 }
 
+void WalletModel::updateAddressBookLabels(const CTxDestination& dest, const string& strName, const string& strPurpose)
+{
+    LOCK(wallet->cs_wallet);
+
+    std::map<CTxDestination, CAddressBookData>::iterator mi = wallet->mapAddressBook.find(dest);
+
+    // Check if we have a new address or an updated label
+    if (mi == wallet->mapAddressBook.end()) {
+        wallet->SetAddressBook(dest, strName, strPurpose);
+    } else if (mi->second.name != strName) {
+        wallet->SetAddressBook(dest, strName, ""); // "" means don't change purpose
+    }
+}
+
 WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransaction& transaction, const CCoinControl* coinControl)
 {
     CAmount total = 0;
@@ -314,7 +329,8 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
 
 
         if (recipients[0].useSwiftTX && total > GetSporkValue(SPORK_5_MAX_VALUE) * COIN) {
-            emit message(tr("Send Coins"), tr("SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 VIBOOK.").arg(GetSporkValue(SPORK_5_MAX_VALUE)),
+			LogPrintf("%s: SwiftX doesn't support sending values that high yet. The value to send is %s \n", __func__, std::to_string(total).c_str());
+            emit message(tr("Send Coins"), tr("SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 BOOK.").arg(GetSporkValue(SPORK_5_MAX_VALUE)),
                 CClientUIInterface::MSG_ERROR);
             return TransactionCreationFailed;
         }
@@ -323,7 +339,8 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
         transaction.setTransactionFee(nFeeRequired);
 
         if (recipients[0].useSwiftTX && newTx->GetValueOut() > GetSporkValue(SPORK_5_MAX_VALUE) * COIN) {
-            emit message(tr("Send Coins"), tr("SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 VIBOOK.").arg(GetSporkValue(SPORK_5_MAX_VALUE)),
+			LogPrintf("%s: SwiftX doesn't support sending values that high yet. The tx value to send is %s \n", __func__, std::to_string(newTx->GetValueOut()).c_str());
+            emit message(tr("Send Coins"), tr("SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 BOOK.").arg(GetSporkValue(SPORK_5_MAX_VALUE)),
                 CClientUIInterface::MSG_ERROR);
             return TransactionCreationFailed;
         }
@@ -389,21 +406,12 @@ WalletModel::SendCoinsReturn WalletModel::sendCoins(WalletModelTransaction& tran
     foreach (const SendCoinsRecipient& rcp, transaction.getRecipients()) {
         // Don't touch the address book when we have a payment request
         if (!rcp.paymentRequest.IsInitialized()) {
+
             std::string strAddress = rcp.address.toStdString();
             CTxDestination dest = CBitcoinAddress(strAddress).Get();
             std::string strLabel = rcp.label.toStdString();
-            {
-                LOCK(wallet->cs_wallet);
 
-                std::map<CTxDestination, CAddressBookData>::iterator mi = wallet->mapAddressBook.find(dest);
-
-                // Check if we have a new address or an updated label
-                if (mi == wallet->mapAddressBook.end()) {
-                    wallet->SetAddressBook(dest, strLabel, "send");
-                } else if (mi->second.name != strLabel) {
-                    wallet->SetAddressBook(dest, strLabel, ""); // "" means don't change purpose
-                }
-            }
+            updateAddressBookLabels(dest, strLabel, "send");
         }
         emit coinsSent(wallet, rcp, transaction_array);
     }
@@ -587,7 +595,7 @@ void WalletModel::unsubscribeFromCoreSignals()
 }
 
 // WalletModel::UnlockContext implementation
-WalletModel::UnlockContext WalletModel::requestUnlock(bool relock)
+WalletModel::UnlockContext WalletModel::requestUnlock(AskPassphraseDialog::Context context, bool relock)
 {
     bool was_locked = getEncryptionStatus() == Locked;
 
@@ -599,7 +607,7 @@ WalletModel::UnlockContext WalletModel::requestUnlock(bool relock)
 
     if (was_locked) {
         // Request UI to unlock wallet
-        emit requireUnlock();
+        emit requireUnlock(context);
     }
     // If wallet is still locked, unlock was failed or cancelled, mark context as invalid
     bool valid = getEncryptionStatus() != Locked;

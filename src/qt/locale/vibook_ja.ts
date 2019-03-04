@@ -263,7 +263,7 @@
     </message>
     </context>
 <context>
-    <name>ZPhrControlDialog</name>
+    <name>ZATRControlDialog</name>
     </context>
 <context>
     <name>vibook-core</name>

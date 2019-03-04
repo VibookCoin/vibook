@@ -1,6 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2015-2017 The PIVX developers	
+// Copyright (c) 2018 The ViBOOK developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -11,7 +12,7 @@
 static const int MODEL_UPDATE_DELAY = 250;
 
 /* AskPassphraseDialog -- Maximum passphrase length */
-static const int MAX_PASSVIBOOKASE_SIZE = 1024;
+static const int MAX_PASSPHRASE_SIZE = 1024;
 
 /* ViBOOK GUI -- Size of icons in status bar */
 static const int STATUSBAR_ICONSIZE = 16;
@@ -19,20 +20,22 @@ static const int STATUSBAR_ICONSIZE = 16;
 static const bool DEFAULT_SPLASHSCREEN = true;
 
 /* Invalid field background style */
-#define STYLE_INVALID "background:#FF8080"
+#define STYLE_INVALID "background:#aa1212"
 
 /* Transaction list -- unconfirmed transaction */
-#define COLOR_UNCONFIRMED QColor(255, 0, 0)
+#define COLOR_UNCONFIRMED QColor(56, 77, 119)
 /* Transaction list -- negative amount */
-#define COLOR_NEGATIVE QColor(255, 0, 0)
+#define COLOR_NEGATIVE QColor(140, 51, 0)
 /* Transaction list -- bare address (without label) */
-#define COLOR_BAREADDRESS QColor(255, 255, 255)
+#define COLOR_BAREADDRESS QColor(33, 32, 32)
 /* Transaction list -- TX status decoration - open until date */
-#define COLOR_TX_STATUS_OPENUNTILDATE QColor(64, 64, 255)
+#define COLOR_TX_STATUS_OPENUNTILDATE QColor(30, 30, 122)
 /* Transaction list -- TX status decoration - offline */
-#define COLOR_TX_STATUS_OFFLINE QColor(192, 192, 192)
+#define COLOR_TX_STATUS_OFFLINE QColor(96, 54, 54)
 /* Transaction list -- TX status decoration - default color */
-#define COLOR_BLACK QColor(255, 255, 255)
+#define COLOR_BLACK QColor(33, 32, 32)
+/* Transaction list -- TX status decoration - conflicted */
+#define COLOR_CONFLICTED QColor(153, 12, 12)
 
 /* Tooltips longer than this (in characters) are converted into rich text,
    so that they can be word-wrapped.

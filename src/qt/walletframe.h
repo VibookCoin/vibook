@@ -5,6 +5,8 @@
 #ifndef BITCOIN_QT_WALLETFRAME_H
 #define BITCOIN_QT_WALLETFRAME_H
 
+#include "askpassphrasedialog.h"
+
 #include <QFrame>
 #include <QMap>
 
@@ -57,6 +59,8 @@ public slots:
     /** Switch to masternode page */
     void gotoMasternodePage();
     /** Switch to receive coins page */
+    void gotoMasternodeAllPage();
+    /** Switch to masternode page */
     void gotoReceiveCoinsPage();
     /** Switch to privacy page */
     void gotoPrivacyPage();
@@ -82,7 +86,8 @@ public slots:
     /** Change encrypted wallet passphrase */
     void changePassphrase();
     /** Ask for passphrase to unlock wallet temporarily */
-    void unlockWallet();
+    void unlockWallet(AskPassphraseDialog::Context context);
+    void unlockWallet(bool setContext);
     /** Lock wallet */
     void lockWallet();
     /** Toggle Wallet Lock State */

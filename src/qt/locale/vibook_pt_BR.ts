@@ -172,16 +172,16 @@
         <translation>Confirmar criptografia de carteira</translation>
     </message>
     <message>
-        <source>ViBOOK will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your VIBOOKs from being stolen by malware infecting your computer.</source>
-        <translation>ViBOOK vai fechar agora para finalizar o processo de criptografia. Lembre-se que encriptar sua carteira não pode proteger totalmente suas VIBOOKs de serem roubadas por malwares infectando seu computador.</translation>
+        <source>ViBOOK will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ATRs from being stolen by malware infecting your computer.</source>
+        <translation>ViBOOK vai fechar agora para finalizar o processo de criptografia. Lembre-se que encriptar sua carteira não pode proteger totalmente suas ATRs de serem roubadas por malwares infectando seu computador.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Você tem certeza que deseja criptografar sua carteira?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VIBOOK&lt;/b&gt;!</source>
-        <translation>Aviso: se você criptografar sua carteira e perder sua senha você &lt;b&gt;PERDERÁ TODAS AS SUAS VIBOOK&lt;b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ATR&lt;/b&gt;!</source>
+        <translation>Aviso: se você criptografar sua carteira e perder sua senha você &lt;b&gt;PERDERÁ TODAS AS SUAS ATR&lt;b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -812,6 +812,10 @@ MultiSend: %1</translation>
 </context>
 <context>
     <name>ClientModel</name>
+    <message>
+        <source>Total: %1 (OBF compatible: %2 / Enabled: %3)</source>
+        <translation>Total: %1 (OBF compatível: %2 / Ativado: %3)</translation>
+    </message>
     <message>
         <source>Network Alert</source>
         <translation>Alerta de rede</translation>
@@ -1448,32 +1452,32 @@ Favor verificar o endereço e tente novamente.</translation>
         <translation>Favor selecionar o nível de privacidade.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 VIBOOK</source>
-        <translation>Use 2 masternodes separados para embaralhar fundos até 10000 VIBOOK</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 ATR</source>
+        <translation>Use 2 masternodes separados para embaralhar fundos até 10000 ATR</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 VIBOOK</source>
-        <translation>Use 8 masternodes separados para embaralhar fundos até 10000 VIBOOK</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 ATR</source>
+        <translation>Use 8 masternodes separados para embaralhar fundos até 10000 ATR</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Use 16 masternodes separados</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 VIBOOK to anonymize 10000 VIBOOK</source>
-        <translation>Está opção é a mais rápida e vai custar em torno de ~0.025 VIBOOK para anonimizar 10000 VIBOOK</translation>
+        <source>This option is the quickest and will cost about ~0.025 ATR to anonymize 10000 ATR</source>
+        <translation>Está opção é a mais rápida e vai custar em torno de ~0.025 ATR para anonimizar 10000 ATR</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 VIBOOK to anonymize 10000 VIBOOK</source>
-        <translation>Está opção moderamente rápida e vai custar em torno de ~0.05 VIBOOK para anonimizar 10000 VIBOOK</translation>
+        <source>This option is moderately fast and will cost about 0.05 ATR to anonymize 10000 ATR</source>
+        <translation>Está opção moderamente rápida e vai custar em torno de ~0.05 ATR para anonimizar 10000 ATR</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Esta é a opção mais lenta e mais segura. Usando a anonimização máxima vai custar</translation>
     </message>
     <message>
-        <source>0.1 VIBOOK per 10000 VIBOOK you anonymize.</source>
-        <translation>0.1 VIBOOK por 10000 VIBOOK que deixar anônima.</translation>
+        <source>0.1 ATR per 10000 ATR you anonymize.</source>
+        <translation>0.1 ATR por 10000 ATR que deixar anônima.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -2425,8 +2429,8 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>Tamanho UTXO:</translation>
     </message>
     <message>
-        <source>0 VIBOOK</source>
-        <translation>0 VIBOOK</translation>
+        <source>0 ATR</source>
+        <translation>0 ATR</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2465,8 +2469,8 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>Tempo de confirmação:</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uVIBOOKs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uVIBOOKs in fee,&lt;br /&gt;while "at least" pays 1000 uVIBOOKs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Se a taxa padrão estiver definida para 1000 uVIBOOKs e a transação for somente de 250 bytes, então "por kilobyte" pagará somente 250 uVIBOOKs em taxa,&lt;br /&gt; pagará pelo menos 1000 uVIBOOKs. Para transações maiores que um kilobyte ambas pagam por kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uATRs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uATRs in fee,&lt;br /&gt;while "at least" pays 1000 uATRs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Se a taxa padrão estiver definida para 1000 uATRs e a transação for somente de 250 bytes, então "por kilobyte" pagará somente 250 uATRs em taxa,&lt;br /&gt; pagará pelo menos 1000 uATRs. Para transações maiores que um kilobyte ambas pagam por kilobyte.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for ViBOOK transactions than the network can process.</source>
@@ -3357,8 +3361,8 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>Enviar Moedas</translation>
     </message>
     <message>
-        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 VIBOOK.</source>
-        <translation>SwiftTX ainda não suporta o envio de valores altos assim. As transações atualmente são limitadas a %1 VIBOOK.</translation>
+        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 ATR.</source>
+        <translation>SwiftTX ainda não suporta o envio de valores altos assim. As transações atualmente são limitadas a %1 ATR.</translation>
     </message>
 </context>
 <context>
@@ -3401,7 +3405,7 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
     </message>
 </context>
 <context>
-    <name>ZPhrControlDialog</name>
+    <name>ZATRControlDialog</name>
     <message>
         <source>0</source>
         <translation>0</translation>
@@ -3430,12 +3434,12 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>Executar o comando quando uma transação da carteira mudar (%s no cmd será substituído pela TxID)</translation>
     </message>
     <message>
-        <source>Fees (in VIBOOK/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Taxas (em VIBOOK/Kb) menores que isso serão consideradas taxa zero para propagação (padrão: %s)</translation>
+        <source>Fees (in ATR/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Taxas (em ATR/Kb) menores que isso serão consideradas taxa zero para propagação (padrão: %s)</translation>
     </message>
     <message>
-        <source>Fees (in VIBOOK/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Taxas (em VIBOOK/Kb) menores que isso serão consideradas taxa zero para a criação da transação (padrão: %s)</translation>
+        <source>Fees (in ATR/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Taxas (em ATR/Kb) menores que isso serão consideradas taxa zero para a criação da transação (padrão: %s)</translation>
     </message>
     <message>
         <source>In this mode -genproclimit controls how many blocks are generated immediately.</source>
@@ -3458,8 +3462,8 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>SwiftTX requer inputs com pelo menos 6 confirmações, você precisar aguardar alguns minutos e tentar novamente.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 VIBOOK.</source>
-        <translation>Incapaz de localizar fundos para esta transação que não são iguais a 10000 VIBOOK.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 ATR.</source>
+        <translation>Incapaz de localizar fundos para esta transação que não são iguais a 10000 ATR.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -3490,8 +3494,8 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>Você deve especificar uma masternodeprivkey na configuração. Favor verificar o manual para obter ajuda.</translation>
     </message>
     <message>
-        <source>(22262 could be used only on mainnet)</source>
-        <translation>(22262 could be used only on mainnet)</translation>
+        <source>(46200 could be used only on mainnet)</source>
+        <translation>(46200 could be used only on mainnet)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -3502,8 +3506,8 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>(padrão: 1)</translation>
     </message>
     <message>
-        <source>(must be 22262 for mainnet)</source>
-        <translation>(deve ser 22262 para mainnet)</translation>
+        <source>(must be 46200 for mainnet)</source>
+        <translation>(deve ser 46200 para mainnet)</translation>
     </message>
     <message>
         <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
@@ -3554,8 +3558,12 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>Todos os direitos reservados (C) 2014-%i aos Desenvolvedores do Dash Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The ViBOOK Core Developers</source>
+        <source>Copyright (C) 2015-%i The PIVX Core Developers</source>
         <translation>Todos os direitos reservados (C) 2015-%i aos Desenvolvedores do ViBOOK Core</translation>
+    </message>
+    <message>
+        <source>Copyright (C) 2018-%i The ViBOOK Core Developers</source>
+        <translation>Copyright (C) 2018-%i The ViBOOK Core Developers</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>
@@ -3646,8 +3654,8 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>Falhou em ler o bloco</translation>
     </message>
     <message>
-        <source>Fee (in VIBOOK/kB) to add to transactions you send (default: %s)</source>
-        <translation>Taxa (em VIBOOK/kB) a adicionar em transações que você enviar (padrão: %s)</translation>
+        <source>Fee (in ATR/kB) to add to transactions you send (default: %s)</source>
+        <translation>Taxa (em ATR/kB) a adicionar em transações que você enviar (padrão: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -3700,6 +3708,14 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
     <message>
         <source>Insufficient funds.</source>
         <translation>Fundos insuficientes.</translation>
+    </message>
+    <message>
+        <source>Invalid -onion address: '%s'</source>
+        <translation>Inválido -onion endereço: '%s'</translation>
+    </message>
+    <message>
+        <source>Invalid -proxy address: '%s'</source>
+        <translation>Inválido -proxy endereço: '%s'</translation>
     </message>
     <message>
         <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s'</source>

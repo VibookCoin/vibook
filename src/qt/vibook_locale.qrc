@@ -10,7 +10,6 @@
         <file alias="es">locale/vibook_es.qm</file>
         <file alias="fi">locale/vibook_fi.qm</file>
         <file alias="fr_FR">locale/vibook_fr_FR.qm</file>
-        <file alias="hr">locale/vibook_hr.qm</file>
         <file alias="it">locale/vibook_it.qm</file>
         <file alias="ja">locale/vibook_ja.qm</file>
         <file alias="ko_KR">locale/vibook_ko_KR.qm</file>

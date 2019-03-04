@@ -10,7 +10,8 @@
  * @license    This project is released under the MIT license.
  **/
 
-// Copyright (c) 2017 The PIVX developers
+// Copyright (c) 2017 The PIVX developers	
+// Copyright (c) 2017 The ViBOOK developers
 #include <stdexcept>
 #include <iostream>
 #include "Coin.h"

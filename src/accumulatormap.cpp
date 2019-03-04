@@ -1,4 +1,5 @@
-// Copyright (c) 2017 The PIVX developers
+// Copyright (c) 2017 The PIVX developers	
+// Copyright (c) 2017 The ViBOOK developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -38,7 +39,7 @@ bool AccumulatorMap::Load(uint256 nCheckpoint)
 
         CBigNum bnValue;
         if (!zerocoinDB->ReadAccumulatorValue(nChecksum, bnValue)) {
-            LogPrintf("%s : cannot find checksum %d\n", __func__, nChecksum);
+            LogPrintf("%s : cannot find checksum %d", __func__, nChecksum);
             return false;
         }
 

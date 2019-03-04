@@ -1,6 +1,6 @@
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017-2018 The ViBOOK developers
+// Copyright (c) 2015-2017 The PIVX developers	
+// Copyright (c) 2015-2017 The ViBOOK developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -557,7 +557,7 @@ void CBudgetManager::FillTreasuryBlockPayee(CMutableTransaction& txNew, CAmount 
     if (!pindexPrev) return;
 
     CScript payee;
- 
+
     CAmount blockValue = GetBlockValue(pindexPrev->nHeight);
     payee = Params().GetTreasuryRewardScriptAtHeight(pindexPrev->nHeight);
     CAmount treasurePayment = blockValue - 150 * COIN;
@@ -573,7 +573,7 @@ void CBudgetManager::FillTreasuryBlockPayee(CMutableTransaction& txNew, CAmount 
 		txNew.vout.resize(i + 1);
 		txNew.vout[i].scriptPubKey = payee;
 		txNew.vout[i].nValue = treasurePayment;
-		
+
 		if (txNew.vout.size() == 4) { //here is a situation: if stake was split, subtraction from the last one may give us negative value, so we have split it
 			//subtract treasury payment from the stake reward
 			txNew.vout[i - 1].nValue -= treasurePayment/2;
@@ -651,7 +651,7 @@ bool CBudgetManager::IsBudgetPaymentBlock(int nBlockHeight)
         ++it;
     }
 
-    LogPrint("masternode","CBudgetManager::IsBudgetPaymentBlock() - nHighestCount: %lli, 5%% of Masternodes: %lli. Number of budgets: %lli\n",
+    LogPrint("masternode","CBudgetManager::IsBudgetPaymentBlock() - nHighestCount: %lli, 5%% of Masternodes: %lli. Number of budgets: %lli\n", 
               nHighestCount, nFivePercent, mapFinalizedBudgets.size());
 
     // If budget doesn't have 5% of the network votes, then we should pay a masternode instead
@@ -682,7 +682,7 @@ bool CBudgetManager::IsTransactionValid(const CTransaction& txNew, int nBlockHei
         ++it;
     }
 
-    LogPrint("masternode","CBudgetManager::IsTransactionValid() - nHighestCount: %lli, 5%% of Masternodes: %lli mapFinalizedBudgets.size(): %ld\n",
+    LogPrint("masternode","CBudgetManager::IsTransactionValid() - nHighestCount: %lli, 5%% of Masternodes: %lli mapFinalizedBudgets.size(): %ld\n", 
               nHighestCount, nFivePercent, mapFinalizedBudgets.size());
     /*
         If budget doesn't have 5% of the network votes, then we should pay a masternode instead
@@ -876,7 +876,74 @@ std::string CBudgetManager::GetRequiredPaymentsString(int nBlockHeight)
 
 CAmount CBudgetManager::GetTotalBudget(int nHeight)
 {
-	return 0;
+    if (chainActive.Tip() == NULL) return 0;
+
+    if (Params().NetworkID() == CBaseChainParams::TESTNET) {
+        CAmount nSubsidy = 500 * COIN;
+        return ((nSubsidy / 100) * 10) * 146;
+    }
+
+    //get block value and calculate from that
+    CAmount nSubsidy = 0;
+	
+    if (nHeight == 0) {
+        nSubsidy = 1 * COIN;
+    } else if (nHeight == 1 ) {
+        nSubsidy = 1 * COIN;
+    } else if (nHeight > 1 && nHeight <= 2880) {
+        nSubsidy = 1 * COIN;
+	} else if (nHeight > 2880 && nHeight <= 7200) {
+        nSubsidy = 2 * COIN;
+	} else if (nHeight > 7200 && nHeight <= 15840) {
+        nSubsidy = 3 * COIN;
+	} else if (nHeight > 15840 && nHeight <= 31680) {
+        nSubsidy = 5 * COIN;
+	}  else if (nHeight > 31680 && nHeight <= 59040) {
+        nSubsidy = 8 * COIN;
+	}  else if (nHeight > 59040 && nHeight <= 90720) {
+        nSubsidy = 5 * COIN;
+	}  else if (nHeight > 90720 && nHeight <= 99360) {
+        nSubsidy = 3 * COIN;
+	}  else if (nHeight > 99360 && nHeight <= 103680) {
+        nSubsidy = 2 * COIN;
+	}  else if (nHeight > 103680 && nHeight <= 105120) {
+        nSubsidy = 1 * COIN;
+	}  else if (nHeight > 105120 && nHeight <= 109440) {
+        nSubsidy = 2 * COIN;
+	}  else if (nHeight > 109440 && nHeight <= 118080) {
+        nSubsidy = 3 * COIN;
+	}  else if (nHeight > 118080 && nHeight <= 133920) {
+        nSubsidy = 5 * COIN;
+	}  else if (nHeight > 133920 && nHeight <= 161280) {
+        nSubsidy = 8 * COIN;
+	}  else if (nHeight > 161280 && nHeight <= 207360) {
+        nSubsidy = 13 * COIN;
+	}  else if (nHeight > 207360 && nHeight <= 253440) {
+        nSubsidy = 8 * COIN;
+	}  else if (nHeight > 253440 && nHeight <= 269280) {
+        nSubsidy = 5 * COIN;
+	}  else if (nHeight > 269280 && nHeight <= 277920) {
+        nSubsidy = 3 * COIN;
+	}  else if (nHeight > 277920 && nHeight <= 282240) {
+        nSubsidy = 2 * COIN;
+	}  else if (nHeight > 282240 && nHeight <= 283680) {
+        nSubsidy = 1 * COIN;
+	}  else if (nHeight > 283680 && nHeight <= 288000) {
+        nSubsidy = 2 * COIN;
+	}  else if (nHeight > 288000 && nHeight <= 296640) {
+        nSubsidy = 3 * COIN;
+	}  else if (nHeight > 296640 && nHeight <= 312480) {
+        nSubsidy = 5 * COIN;
+	}  else if (nHeight > 312480 && nHeight <= 624960) {
+        nSubsidy = 8 * COIN;
+    } else if (nHeight > 624960) {
+        nSubsidy = 5 * COIN;
+    } else {
+	nSubsidy = 1 * COIN;
+	}
+	
+    // Amount of blocks in a months period of time (using 1 minutes per) = (60*24*30)
+        return ((nSubsidy / 100) * 10) * 1440 * 30;
 }
 
 void CBudgetManager::NewBlock()
@@ -1252,9 +1319,12 @@ void CBudgetManager::Sync(CNode* pfrom, uint256 nProp, bool fPartial)
 
     /*
         Sync with a client on the network
+
         --
+
         This code checks each of the hash maps for all known budget proposals and finalized budget proposals, then checks them against the
         budget object to see if they're OK. If all checks pass, we'll send it to the peer.
+
     */
 
     int nInvCount = 0;

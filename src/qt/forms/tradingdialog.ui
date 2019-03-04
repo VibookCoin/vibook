@@ -181,7 +181,7 @@
       <string>Asks</string>
      </property>
     </widget>
-    <widget class="QLabel" name="VIBOOKSupply">
+    <widget class="QLabel" name="BOOKSupply">
      <property name="geometry">
       <rect>
        <x>540</x>
@@ -197,7 +197,7 @@
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="VIBOOKDemand">
+    <widget class="QLabel" name="BOOKDemand">
      <property name="geometry">
       <rect>
        <x>160</x>
@@ -432,7 +432,7 @@
     <attribute name="title">
      <string>Buy</string>
     </attribute>
-    <widget class="QPushButton" name="BuyVIBOOK">
+    <widget class="QPushButton" name="BuyBOOK">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -442,7 +442,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Buy VIBOOK</string>
+      <string>Buy BOOK</string>
      </property>
      <property name="icon">
       <iconset resource="../vibook.qrc">
@@ -512,7 +512,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>VIBOOK</string>
+      <string>BOOK</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_5">
@@ -1704,10 +1704,10 @@
       </rect>
      </property>
      <property name="text">
-      <string>VIBOOK</string>
+      <string>BOOK</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="UnitsInputVIBOOK">
+    <widget class="QLineEdit" name="UnitsInputBOOK">
      <property name="geometry">
       <rect>
        <x>310</x>
@@ -1741,7 +1741,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QPushButton" name="SellVIBOOKBTN">
+    <widget class="QPushButton" name="SellBOOKBTN">
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -1751,7 +1751,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Sell VIBOOK</string>
+      <string>Sell BOOK</string>
      </property>
      <property name="icon">
       <iconset resource="../vibook">
@@ -1777,12 +1777,12 @@
          </font>
         </property>
         <property name="text">
-         <string>VIBOOK Available:</string>
+         <string>BOOK Available:</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="VIBOOKAvailableLabel">
+       <widget class="QLabel" name="BOOKAvailableLabel">
         <property name="palette">
          <palette>
           <active>
@@ -2213,7 +2213,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="labelVIBOOK">
+       <widget class="QLabel" name="labelBOOK">
         <property name="font">
          <font>
           <weight>75</weight>
@@ -2221,7 +2221,7 @@
          </font>
         </property>
         <property name="text">
-         <string>VIBOOK</string>
+         <string>BOOK</string>
         </property>
        </widget>
       </item>
@@ -2733,7 +2733,7 @@
       <string>TextLabel</string>
      </property>
     </widget>
-    <widget class="QLabel" name="VIBOOKBalanceLabel">
+    <widget class="QLabel" name="BOOKBalanceLabel">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -2762,7 +2762,7 @@
       </font>
      </property>
      <property name="text">
-      <string>VIBOOK Balance:</string>
+      <string>BOOK Balance:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_12">
@@ -2784,7 +2784,7 @@
       <string>BTC Balance:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="VIBOOKAvailableLabel_2">
+    <widget class="QLabel" name="BOOKAvailableLabel_2">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -2813,7 +2813,7 @@
       </font>
      </property>
      <property name="text">
-      <string>VIBOOK Available:</string>
+      <string>BOOK Available:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_14">
@@ -2832,10 +2832,10 @@
       </font>
      </property>
      <property name="text">
-      <string>VIBOOK Pending:</string>
+      <string>BOOK Pending:</string>
      </property>
     </widget>
-    <widget class="QLabel" name="VIBOOKPendingLabel">
+    <widget class="QLabel" name="BOOKPendingLabel">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -2928,7 +2928,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Bittrex VIBOOK Deposit Address:</string>
+      <string>Bittrex BOOK Deposit Address:</string>
      </property>
     </widget>
     <widget class="QPushButton" name="GenDepositBTN">

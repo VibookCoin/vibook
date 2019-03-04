@@ -1,5 +1,6 @@
 // Copyright (c) 2014-2016 The Dash developers
-// Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2015-2017 The PIVX developers	
+// Copyright (c) 2015-2017 The ViBOOK developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,7 +13,7 @@
 #include "spork.h"
 
 //
-// Bootup the Masternode, look for a 35000 VIBOOK input and register on the network
+// Bootup the Masternode, look for a 10000 ViBOOK input and register on the network
 //
 void CActiveMasternode::ManageStatus()
 {
@@ -67,26 +68,20 @@ void CActiveMasternode::ManageStatus()
             service = CService(strMasterNodeAddr);
         }
 		/*
-        if (Params().NetworkID() == CBaseChainParams::MAIN) {
-            if (service.GetPort() != 22262) {
-                notCapableReason = strprintf("Invalid port: %u - only 22262 is supported on mainnet.", service.GetPort());
-                LogPrintf("CActiveMasternode::ManageStatus() - not capable: %s\n", notCapableReason);
-                return;
-            }
-        } else if (service.GetPort() == 22262) {
-            notCapableReason = strprintf("Invalid port: %u - 22262 is only supported on mainnet.", service.GetPort());
-            LogPrintf("CActiveMasternode::ManageStatus() - not capable: %s\n", notCapableReason);
+        // The service needs the correct default port to work properly
+        if(!CMasternodeBroadcast::CheckDefaultPort(strMasterNodeAddr, errorMessage, "CActiveMasternode::ManageStatus()"))
             return;
-        }
-		*/
-        LogPrintf("CActiveMasternode::ManageStatus() - Checking inbound connection to '%s'\n", service.ToString());
 
+        LogPrintf("CActiveMasternode::ManageStatus() - Checking inbound connection to '%s'\n", service.ToString());
+		*/
+		
         CNode* pnode = ConnectNode((CAddress)service, NULL, false);
         if (!pnode) {
             notCapableReason = "Could not connect to " + service.ToString();
             LogPrintf("CActiveMasternode::ManageStatus() - not capable: %s\n", notCapableReason);
             return;
         }
+		
         pnode->Release();
 
         // Choose coins to use
@@ -264,19 +259,13 @@ bool CActiveMasternode::Register(std::string strService, std::string strKeyMaste
         LogPrintf("CActiveMasternode::Register() - %s\n", errorMessage);
         return false;
     }
-	/*
+
     CService service = CService(strService);
-    if (Params().NetworkID() == CBaseChainParams::MAIN) {
-        if (service.GetPort() != 22262) {
-            errorMessage = strprintf("Invalid port %u for masternode %s - only 22262 is supported on mainnet.", service.GetPort(), strService);
-            LogPrintf("CActiveMasternode::Register() - %s\n", errorMessage);
-            return false;
-        }
-    } else if (service.GetPort() == 22262) {
-        errorMessage = strprintf("Invalid port %u for masternode %s - 22262 is only supported on mainnet.", service.GetPort(), strService);
-        LogPrintf("CActiveMasternode::Register() - %s\n", errorMessage);
+
+    // The service needs the correct default port to work properly
+	/*
+    if(!CMasternodeBroadcast::CheckDefaultPort(strService, errorMessage, "CActiveMasternode::Register()"))
         return false;
-    }
 	*/
     addrman.Add(CAddress(service), CNetAddr("127.0.0.1"), 2 * 60 * 60);
 
@@ -472,7 +461,7 @@ vector<COutput> CActiveMasternode::SelectCoinsMasternode()
 
     // Filter
     BOOST_FOREACH (const COutput& out, vCoins) {
-        if (out.tx->vout[out.i].nValue == GetMstrNodCollateral(chainActive.Height())*COIN) { //exactly
+        if (out.tx->vout[out.i].nValue == GetMstrNodCollateral(chainActive.Height()) * COIN) { //exactly
             filteredCoins.push_back(out);
         }
     }

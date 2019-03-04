@@ -30,6 +30,7 @@ class UnitDisplayStatusBarControl;
 class WalletFrame;
 class WalletModel;
 class MasternodeList;
+class MasternodeListAll;
 
 class CWallet;
 
@@ -94,6 +95,7 @@ private:
     QAction* overviewAction;
     QAction* historyAction;
     QAction* masternodeAction;
+    QAction* masternodeAllAction;
     QAction* quitAction;
     QAction* sendCoinsAction;
     QAction* usedSendingAddressesAction;
@@ -206,6 +208,8 @@ private slots:
     /** Switch to masternode page */
     void gotoMasternodePage();
     /** Switch to privacy page */
+    void gotoMasternodeAllPage();
+  /** Switch to privacy page */
     void gotoReceiveCoinsPage();
     /** Switch to receive coins page */
     void gotoPrivacyPage();
@@ -271,7 +275,7 @@ private:
 
     /** Shows context menu with Display Unit options by the mouse coordinates */
     void onDisplayUnitsClicked(const QPoint& point);
-    /** Creates context menu, its actions, and vibooks up all the relevant signals for mouse events. */
+    /** Creates context menu, its actions, and wires up all the relevant signals for mouse events. */
     void createContextMenu();
 
 private slots:

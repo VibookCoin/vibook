@@ -1,9 +1,10 @@
-// Copyright (c) 2017 The PIVX developers
+// Copyright (c) 2017 The PIVX developers	
+// Copyright (c) 2017 The ViBOOK developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef VIBOOK_CSPORKDB_H
-#define VIBOOK_CSPORKDB_H
+#ifndef ViBOOK_CSPORKDB_H
+#define ViBOOK_CSPORKDB_H
 
 #include <boost/filesystem/path.hpp>
 #include "leveldbwrapper.h"
@@ -25,4 +26,4 @@ public:
 };
 
 
-#endif //VIBOOK_CSPORKDB_H
+#endif //ViBOOK_CSPORKDB_H

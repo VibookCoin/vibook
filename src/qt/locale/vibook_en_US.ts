@@ -176,16 +176,16 @@
         <translation>Confirm wallet encryption</translation>
     </message>
     <message>
-        <source>ViBOOK will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your VIBOOKs from being stolen by malware infecting your computer.</source>
-        <translation>ViBOOK will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your VIBOOKs from being stolen by malware infecting your computer.</translation>
+        <source>ViBOOK will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ATRs from being stolen by malware infecting your computer.</source>
+        <translation>ViBOOK will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ATRs from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Are you sure you wish to encrypt your wallet?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VIBOOK&lt;/b&gt;!</source>
-        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VIBOOK&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ATR&lt;/b&gt;!</source>
+        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ATR&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -1544,32 +1544,32 @@ Please check the address and try again.</translation>
         <translation>Please select a privacy level.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 VIBOOK</source>
-        <translation>Use 2 separate masternodes to mix funds up to 10000 VIBOOK</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 ATR</source>
+        <translation>Use 2 separate masternodes to mix funds up to 10000 ATR</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 VIBOOK</source>
-        <translation>Use 8 separate masternodes to mix funds up to 10000 VIBOOK</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 ATR</source>
+        <translation>Use 8 separate masternodes to mix funds up to 10000 ATR</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Use 16 separate masternodes</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 VIBOOK to anonymize 10000 VIBOOK</source>
-        <translation>This option is the quickest and will cost about ~0.025 VIBOOK to anonymize 10000 VIBOOK</translation>
+        <source>This option is the quickest and will cost about ~0.025 ATR to anonymize 10000 ATR</source>
+        <translation>This option is the quickest and will cost about ~0.025 ATR to anonymize 10000 ATR</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 VIBOOK to anonymize 10000 VIBOOK</source>
-        <translation>This option is moderately fast and will cost about 0.05 VIBOOK to anonymize 10000 VIBOOK</translation>
+        <source>This option is moderately fast and will cost about 0.05 ATR to anonymize 10000 ATR</source>
+        <translation>This option is moderately fast and will cost about 0.05 ATR to anonymize 10000 ATR</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>This is the slowest and most secure option. Using maximum anonymity will cost</translation>
     </message>
     <message>
-        <source>0.1 VIBOOK per 10000 VIBOOK you anonymize.</source>
-        <translation>0.1 VIBOOK per 10000 VIBOOK you anonymize.</translation>
+        <source>0.1 ATR per 10000 ATR you anonymize.</source>
+        <translation>0.1 ATR per 10000 ATR you anonymize.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1927,8 +1927,8 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>Obfuscation Balance:</translation>
     </message>
     <message>
-        <source>0 VIBOOK / 0 Rounds</source>
-        <translation>0 VIBOOK / 0 Rounds</translation>
+        <source>0 ATR / 0 Rounds</source>
+        <translation>0 ATR / 0 Rounds</translation>
     </message>
     <message>
         <source>Enabled/Disabled</source>
@@ -2792,8 +2792,8 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>UTXO Size:</translation>
     </message>
     <message>
-        <source>0 VIBOOK</source>
-        <translation>0 VIBOOK</translation>
+        <source>0 ATR</source>
+        <translation>0 ATR</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2840,12 +2840,12 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>Confirmation time:</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uVIBOOKs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uVIBOOKs in fee,&lt;br /&gt;while "at least" pays 1000 uVIBOOKs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>If the custom fee is set to 1000 uVIBOOKs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uVIBOOKs in fee,&lt;br /&gt;while "at least" pays 1000 uVIBOOKs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uATRs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uATRs in fee,&lt;br /&gt;while "at least" pays 1000 uATRs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>If the custom fee is set to 1000 uATRs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uATRs in fee,&lt;br /&gt;while "at least" pays 1000 uATRs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uVIBOOKs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uVIBOOKs in fee,&lt;br /&gt;while "total at least" pays 1000 uVIBOOKs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>If the custom fee is set to 1000 uVIBOOKs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uVIBOOKs in fee,&lt;br /&gt;while "total at least" pays 1000 uVIBOOKs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uATRs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uATRs in fee,&lt;br /&gt;while "total at least" pays 1000 uATRs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>If the custom fee is set to 1000 uATRs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uATRs in fee,&lt;br /&gt;while "total at least" pays 1000 uATRs. For transactions bigger than a kilobyte both pay by kilobyte.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for ViBOOK transactions than the network can process.</source>
@@ -3840,8 +3840,8 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>Send Coins</translation>
     </message>
     <message>
-        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 VIBOOK.</source>
-        <translation>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 VIBOOK.</translation>
+        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 ATR.</source>
+        <translation>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 ATR.</translation>
     </message>
 </context>
 <context>
@@ -3974,12 +3974,12 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>Execute command when the best block changes (%s in cmd is replaced by block hash)</translation>
     </message>
     <message>
-        <source>Fees (in VIBOOK/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Fees (in VIBOOK/Kb) smaller than this are considered zero fee for relaying (default: %s)</translation>
+        <source>Fees (in ATR/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Fees (in ATR/Kb) smaller than this are considered zero fee for relaying (default: %s)</translation>
     </message>
     <message>
-        <source>Fees (in VIBOOK/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Fees (in VIBOOK/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</translation>
+        <source>Fees (in ATR/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Fees (in ATR/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -4114,12 +4114,12 @@ for example: alertnotify=echo %%s | mail -s "ViBOOK Alert" admin@foo.com
         <translation>Unable to locate enough Obfuscation denominated funds for this transaction.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 VIBOOK.</source>
-        <translation>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 VIBOOK.</translation>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 ATR.</source>
+        <translation>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 ATR.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 VIBOOK.</source>
-        <translation>Unable to locate enough funds for this transaction that are not equal 10000 VIBOOK.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 ATR.</source>
+        <translation>Unable to locate enough funds for this transaction that are not equal 10000 ATR.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -4166,8 +4166,8 @@ for example: alertnotify=echo %%s | mail -s "ViBOOK Alert" admin@foo.com
         <translation>You must specify a masternodeprivkey in the configuration. Please see documentation for help.</translation>
     </message>
     <message>
-        <source>(22262 could be used only on mainnet)</source>
-        <translation>(22262 could be used only on mainnet)</translation>
+        <source>(46200 could be used only on mainnet)</source>
+        <translation>(46200 could be used only on mainnet)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -4178,8 +4178,8 @@ for example: alertnotify=echo %%s | mail -s "ViBOOK Alert" admin@foo.com
         <translation>(default: 1)</translation>
     </message>
     <message>
-        <source>(must be 22262 for mainnet)</source>
-        <translation>(must be 22262 for mainnet)</translation>
+        <source>(must be 46200 for mainnet)</source>
+        <translation>(must be 46200 for mainnet)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>
@@ -4282,8 +4282,12 @@ for example: alertnotify=echo %%s | mail -s "ViBOOK Alert" admin@foo.com
         <translation>Copyright (C) 2014-%i The Dash Core Developers</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The ViBOOK Core Developers</source>
-        <translation>Copyright (C) 2015-%i The ViBOOK Core Developers</translation>
+        <source>Copyright (C) 2015-%i The PIVX Core Developers</source>
+        <translation>Copyright (C) 2015-%i The PIVX Core Developers</translation>
+    </message>
+    <message>
+        <source>Copyright (C) 2018-%i The ViBOOK Core Developers</source>
+        <translation>Copyright (C) 2018-%i The ViBOOK Core Developers</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>
@@ -4406,8 +4410,8 @@ for example: alertnotify=echo %%s | mail -s "ViBOOK Alert" admin@foo.com
         <translation>Failed to read block</translation>
     </message>
     <message>
-        <source>Fee (in VIBOOK/kB) to add to transactions you send (default: %s)</source>
-        <translation>Fee (in VIBOOK/kB) to add to transactions you send (default: %s)</translation>
+        <source>Fee (in ATR/kB) to add to transactions you send (default: %s)</source>
+        <translation>Fee (in ATR/kB) to add to transactions you send (default: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -4578,8 +4582,8 @@ for example: alertnotify=echo %%s | mail -s "ViBOOK Alert" admin@foo.com
         <translation>Enable staking functionality (0-1, default: %u)</translation>
     </message>
     <message>
-        <source>Keep N VIBOOK anonymized (default: %u)</source>
-        <translation>Keep N VIBOOK anonymized (default: %u)</translation>
+        <source>Keep N ATR anonymized (default: %u)</source>
+        <translation>Keep N ATR anonymized (default: %u)</translation>
     </message>
     <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>

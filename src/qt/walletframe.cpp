@@ -125,6 +125,13 @@ void WalletFrame::gotoMasternodePage() // Masternode list
         i.value()->gotoMasternodePage();
 }
 
+void WalletFrame::gotoMasternodeAllPage() // Masternode list
+{
+    QMap<QString, WalletView*>::const_iterator i;
+    for (i = mapWalletViews.constBegin(); i != mapWalletViews.constEnd(); ++i)
+        i.value()->gotoMasternodeAllPage();
+}
+
 void WalletFrame::gotoBlockExplorerPage()
 {
     QMap<QString, WalletView*>::const_iterator i;
@@ -211,11 +218,21 @@ void WalletFrame::changePassphrase()
         walletView->changePassphrase();
 }
 
-void WalletFrame::unlockWallet()
+void WalletFrame::unlockWallet(bool setContext)
+{
+    if (setContext) {
+        unlockWallet(AskPassphraseDialog::Context::Unlock_Full);
+    }
+    else {
+        unlockWallet(AskPassphraseDialog::Context::Unlock_Menu);
+    }
+}
+
+void WalletFrame::unlockWallet(AskPassphraseDialog::Context context)
 {
     WalletView* walletView = currentWalletView();
     if (walletView)
-        walletView->unlockWallet();
+        walletView->unlockWallet(context);
 }
 
 void WalletFrame::lockWallet()

@@ -1,19 +1,20 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017-2018 The Solaris developers
+// Copyright (c) 2015-2017 The PIVX developers 
+// Copyright (c) 2018 The ViBOOK developers 
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef XEVAN_H
-#define XEVAN_H
+#ifndef BITCOIN_HASH_H
+#define BITCOIN_HASH_H
 
 #include "crypto/ripemd160.h"
 #include "crypto/sha256.h"
 #include "serialize.h"
 #include "uint256.h"
 #include "version.h"
+
 
 #include "crypto/sph_blake.h"
 #include "crypto/sph_bmw.h"
@@ -33,12 +34,43 @@
 #include "crypto/sph_sha2.h"  
 #include "crypto/sph_haval.h"  
 
+
 #include <iomanip>
 #include <openssl/sha.h>
 #include <sstream>
 #include <vector>
+
 using namespace std;
-typedef uint256 ChainCode;
+
+/** A hasher class for Bitcoin's 256-bit hash (double SHA-256). */
+class CHash256
+{
+private:
+    CSHA256 sha;
+
+public:
+    static const size_t OUTPUT_SIZE = CSHA256::OUTPUT_SIZE;
+
+    void Finalize(unsigned char hash[OUTPUT_SIZE])
+    {
+        unsigned char buf[CSHA256::OUTPUT_SIZE];
+        sha.Finalize(buf);
+        sha.Reset().Write(buf, CSHA256::OUTPUT_SIZE).Finalize(hash);
+    }
+
+    CHash256& Write(const unsigned char* data, size_t len)
+    {
+        sha.Write(data, len);
+        return *this;
+    }
+
+    CHash256& Reset()
+    {
+        sha.Reset();
+        return *this;
+    }
+};
+
 
 #ifdef GLOBALDEFINED
 #define GLOBAL
@@ -97,35 +129,7 @@ GLOBAL sph_haval256_5_context   z_haval;
 #define ZSHA2 (memcpy(&ctx_sha2, &z_sha2, sizeof(z_sha2)))
 #define ZHAVAL (memcpy(&ctx_haval, &z_haval, sizeof(z_haval)))
 
-/** A hasher class for Bitcoin's 256-bit hash (double SHA-256). */
-class CHash256
-{
-private:
-    CSHA256 sha;
-
-public:
-    static const size_t OUTPUT_SIZE = CSHA256::OUTPUT_SIZE;
-
-    void Finalize(unsigned char hash[OUTPUT_SIZE])
-    {
-        unsigned char buf[sha.OUTPUT_SIZE];
-        sha.Finalize(buf);
-        sha.Reset().Write(buf, sha.OUTPUT_SIZE).Finalize(hash);
-    }
-
-    CHash256& Write(const unsigned char* data, size_t len)
-    {
-        sha.Write(data, len);
-        return *this;
-    }
-
-    CHash256& Reset()
-    {
-        sha.Reset();
-        return *this;
-    }
-};
-
+/* ----------- Bitcoin Hash ------------------------------------------------- */
 /** A hasher class for Bitcoin's 160-bit hash (SHA-256 + RIPEMD-160). */
 class CHash160
 {
@@ -155,6 +159,22 @@ public:
     }
 };
 
+/** Compute the 256-bit hash of a std::string */
+inline std::string Hash(std::string input)
+{
+    unsigned char hash[SHA256_DIGEST_LENGTH];
+    SHA256_CTX sha256;
+    SHA256_Init(&sha256);
+    SHA256_Update(&sha256, input.c_str(), input.size());
+    SHA256_Final(hash, &sha256);
+    stringstream ss;
+    for (int i = 0; i < SHA256_DIGEST_LENGTH; i++) {
+        ss << hex << setw(2) << setfill('0') << (int)hash[i];
+    }
+    return ss.str();
+}
+
+/** Compute the 256-bit hash of a void pointer */
 inline void Hash(void* in, unsigned int len, unsigned char* out)
 {
     SHA256_CTX sha256;
@@ -290,6 +310,9 @@ void BIP32Hash(const unsigned char chainCode[32], unsigned int nChild, unsigned 
 //int HMAC_SHA512_Init(HMAC_SHA512_CTX *pctx, const void *pkey, size_t len);
 //int HMAC_SHA512_Update(HMAC_SHA512_CTX *pctx, const void *pdata, size_t len);
 //int HMAC_SHA512_Final(unsigned char *pmd, HMAC_SHA512_CTX *pctx);
+
+/* ----------- Aergo Hash ------------------------------------------------ */
+
 
 template<typename T1>
 inline uint256 XEVAN(const T1 pbegin, const T1 pend)

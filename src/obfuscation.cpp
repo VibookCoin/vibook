@@ -1,5 +1,6 @@
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2015-2017 The PIVX developers	
+// Copyright (c) 2015-2017 The ViBOOK developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -37,7 +38,7 @@ map<uint256, CObfuscationBroadcastTx> mapObfuscationBroadcastTxes;
 // Keep track of the active Masternode
 CActiveMasternode activeMasternode;
 
-/* *** BEGIN OBFUSCATION MAGIC - VIBOOK **********
+/* *** BEGIN OBFUSCATION MAGIC - BOOK **********
     Copyright (c) 2014-2015, Dash Developers
         eduffield - evan@dashpay.io
         udjinm6   - udjinm6@dashpay.io
@@ -779,7 +780,7 @@ void CObfuscationPool::ChargeRandomFees()
                 with using it to stop abuse. Otherwise it could serve as an attack vector and
                 allow endless transaction that would bloat ViBOOK and make it unusable. To
                 stop these kinds of attacks 1 in 10 successful transactions are charged. This
-                adds up to a cost of 0.001 VIBOOK per transaction on average.
+                adds up to a cost of 0.001 BOOK per transaction on average.
             */
             if (r <= 10) {
                 LogPrintf("CObfuscationPool::ChargeRandomFees -- charging random fees. %u\n", i);
@@ -1917,10 +1918,10 @@ void CObfuscationPool::GetDenominationsToString(int nDenom, std::string& strDeno
 {
     // Function returns as follows:
     //
-    // bit 0 - 100VIBOOK+1 ( bit on if present )
-    // bit 1 - 10VIBOOK+1
-    // bit 2 - 1VIBOOK+1
-    // bit 3 - .1VIBOOK+1
+    // bit 0 - 100BOOK+1 ( bit on if present )
+    // bit 1 - 10BOOK+1
+    // bit 2 - 1BOOK+1
+    // bit 3 - .1BOOK+1
     // bit 3 - non-denom
 
 
@@ -1990,10 +1991,10 @@ int CObfuscationPool::GetDenominations(const std::vector<CTxOut>& vout, bool fSi
 
     // Function returns as follows:
     //
-    // bit 0 - 100VIBOOK+1 ( bit on if present )
-    // bit 1 - 10VIBOOK+1
-    // bit 2 - 1VIBOOK+1
-    // bit 3 - .1VIBOOK+1
+    // bit 0 - 100BOOK+1 ( bit on if present )
+    // bit 1 - 10BOOK+1
+    // bit 2 - 1BOOK+1
+    // bit 3 - .1BOOK+1
 
     return denom;
 }
@@ -2111,7 +2112,7 @@ bool CObfuScationSigner::IsVinAssociatedWithPubkey(CTxIn& vin, CPubKey& pubkey)
     uint256 hash;
     if (GetTransaction(vin.prevout.hash, txVin, hash, true)) {
         BOOST_FOREACH (CTxOut out, txVin.vout) {
-            if (out.nValue == GetMstrNodCollateral(chainActive.Height())*COIN) {
+            if (out.nValue == GetMstrNodCollateral(chainActive.Height()) * COIN) {
                 if (out.scriptPubKey == payee2) return true;
             }
         }

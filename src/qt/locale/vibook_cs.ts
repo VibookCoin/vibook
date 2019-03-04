@@ -176,16 +176,16 @@
         <translation>Potvrdit zašifrování peněženky</translation>
     </message>
     <message>
-        <source>ViBOOK will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your VIBOOKs from being stolen by malware infecting your computer.</source>
-        <translation>ViBOOK se teď zavře pro dokončení šifrovacího procesu. Prosím, vemte na vědomí, že zašifrování Vaší peněženky plně neochrání Vaše VIBOOKy před krádží, pokud je Váš počítač infikován malwarem.</translation>
+        <source>ViBOOK will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ATRs from being stolen by malware infecting your computer.</source>
+        <translation>ViBOOK se teď zavře pro dokončení šifrovacího procesu. Prosím, vemte na vědomí, že zašifrování Vaší peněženky plně neochrání Vaše ATRy před krádží, pokud je Váš počítač infikován malwarem.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Opravdu chcete zašifrovat Vaši peněženku?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VIBOOK&lt;/b&gt;!</source>
-        <translation>Varování: Pokud zašifrujete svou peněženku a ztratíte frázové heslo, tak &lt;b&gt;ZTRATÍTE VŠECHNY VAŠE VIBOOKy&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ATR&lt;/b&gt;!</source>
+        <translation>Varování: Pokud zašifrujete svou peněženku a ztratíte frázové heslo, tak &lt;b&gt;ZTRATÍTE VŠECHNY VAŠE ATRy&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -1438,24 +1438,24 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Vyberte úrpvěň ochrany soukromí</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 VIBOOK</source>
-        <translation>Použí 2 oddělené masternody k promíchání prostředků až do 10000 VIBOOK</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 ATR</source>
+        <translation>Použí 2 oddělené masternody k promíchání prostředků až do 10000 ATR</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Použít 16 oddělených masternodů</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 VIBOOK to anonymize 10000 VIBOOK</source>
-        <translation>Tato možnost je nejrychleší a bude stát zhruba ~0.025 VIBOOK pro anonymizaci 10000 VIBOOK</translation>
+        <source>This option is the quickest and will cost about ~0.025 ATR to anonymize 10000 ATR</source>
+        <translation>Tato možnost je nejrychleší a bude stát zhruba ~0.025 ATR pro anonymizaci 10000 ATR</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Toto je nejpomalejší a nejvíce bezpečná volba. Použití maximalní anonymity bude stát</translation>
     </message>
     <message>
-        <source>0.1 VIBOOK per 10000 VIBOOK you anonymize.</source>
-        <translation>0.1 VIBOOK za 10000 VIBOOK anonymizujete.</translation>
+        <source>0.1 ATR per 10000 ATR you anonymize.</source>
+        <translation>0.1 ATR za 10000 ATR anonymizujete.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -2057,8 +2057,8 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Změna:</translation>
     </message>
     <message>
-        <source>0 VIBOOK</source>
-        <translation>0 VIBOOK</translation>
+        <source>0 ATR</source>
+        <translation>0 ATR</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2369,7 +2369,7 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
     </message>
     </context>
 <context>
-    <name>ZPhrControlDialog</name>
+    <name>ZATRControlDialog</name>
     <message>
         <source>0</source>
         <translation>0</translation>

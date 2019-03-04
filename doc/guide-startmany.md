@@ -8,7 +8,7 @@ There are many ways to setup a wallet to support start-many. This guide will wal
 
 ## <a name="option1"></a>Option 1. Importing an existing wallet
 
-This is the way to go if you are consolidating multiple wallets into one that supports start-many.
+This is the way to go if you are consolidating multiple wallets into one that supports start-many. 
 
 ### From your single-instance MasterNode Wallet
 
@@ -80,7 +80,7 @@ Create the masternode.conf file in the same directory as your wallet.dat.
 
 Copy the masternode private key and correspondig collateral output transaction that holds the 1K ViBOOK.
 
-The masternode private key may be an existing key from [Option 1](#option1), or a newly generated key from [Option 2](#option2).
+The masternode private key may be an existing key from [Option 1](#option1), or a newly generated key from [Option 2](#option2). 
 
 *Please note, the masternode priviate key is not the same as a wallet private key. Never put your wallet private key in the masternode.conf file. That is equivalent to putting your 10,000 ViBOOK on the remote server and defeats the purpose of a hot/cold setup.*
 
@@ -95,7 +95,7 @@ Issue the following:
 Make note of the hash (which is your collaterla_output) and index.
 
 ### Enter your MasterNode details into your masternode.conf file
-[From the ViBOOK github repo](https://github.com/eastcoastcrypto/ViBOOK/blob/master/doc/masternode_conf.md)
+[From the vibook github repo](https://github.com/vibook-crypto/vibook/blob/master/doc/masternode_conf.md)
 
 The new masternode.conf format consists of a space seperated text file. Each line consisting of an alias, IP address followed by port, masternode private key, collateral output transaction id and collateral output index, donation address and donation percentage (the latter two are optional and should be in format "address:percentage").
 
@@ -108,13 +108,13 @@ alias ipaddress:port masternode_private_key collateral_output collateral_output_
 Example:
 
 ```
-mn01 127.0.0.1:22262 93HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg 2bcd3c84c84f87eaa86e4e56834c92927a07f9e18718810b92e0d0324456a67c 0
-mn02 127.0.0.2:22262 93WaAb3htPJEV8E9aQcN23Jt97bPex7YvWfgMDTUdWJvzmrMqey aa9f1034d973377a5e733272c3d0eced1de22555ad45d6b24abadff8087948d4 0 7gnwGHt17heGpG9Crfeh4KGpYNFugPhJdh:25
+mn01 127.0.0.1:46200 93HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg 2bcd3c84c84f87eaa86e4e56834c92927a07f9e18718810b92e0d0324456a67c 0
+mn02 127.0.0.2:46200 93WaAb3htPJEV8E9aQcN23Jt97bPex7YvWfgMDTUdWJvzmrMqey aa9f1034d973377a5e733272c3d0eced1de22555ad45d6b24abadff8087948d4 0 7gnwGHt17heGpG9Crfeh4KGpYNFugPhJdh:25
 ```
 
 ## What about the vibook.conf file?
 
-If you are using a masternode.conf file you no longer need the vibook.conf file. The exception is if you need custom settings (thanks oblox).
+If you are using a masternode.conf file you no longer need the vibook.conf file. The exception is if you need custom settings (thanks oblox). 
 
 ## Update vibook.conf on server
 
@@ -131,13 +131,13 @@ If you generated a new masternode private key, you will need to update the maste
 
 ### Remote
 
-If your remote server is not running, start your remote daemon as you normally would.
+If your remote server is not running, start your remote daemon as you normally would. 
 
 I usually confirm that remote is on the correct block by issuing:
 
 ```vibookd getinfo```
 
-And compare with the official explorer at http://vibookcoin.com
+And compare with the official explorer at http://vibookexplorer.coin-server.com <or> dnet.presstab.pw
 
 ### Local
 

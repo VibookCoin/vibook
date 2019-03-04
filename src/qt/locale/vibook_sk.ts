@@ -176,16 +176,16 @@
         <translation>Potvrďte šifrovanie peňaženky</translation>
     </message>
     <message>
-        <source>ViBOOK will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your VIBOOKs from being stolen by malware infecting your computer.</source>
-        <translation>ViBOOK sa teraz ukončí, aby dokončil proces šifrovania. Nezabudnite, že šifrovanie peňaženky nemôže úplne ochrániť vaše VIBOOK pred odcudzením škodlivým softvérom, ktorý infikuje váš počítač.</translation>
+        <source>ViBOOK will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ATRs from being stolen by malware infecting your computer.</source>
+        <translation>ViBOOK sa teraz ukončí, aby dokončil proces šifrovania. Nezabudnite, že šifrovanie peňaženky nemôže úplne ochrániť vaše ATR pred odcudzením škodlivým softvérom, ktorý infikuje váš počítač.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Naozaj chcete zašifrovať svoju peňaženku?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VIBOOK&lt;/b&gt;!</source>
-        <translation>Upozornenie: Ak zašifrujete svoju peňaženku a stratíte svoju prístupovú frázu, &lt;b&gt; PRÍDETE O VŠETKY VIBOOK &lt;/ b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ATR&lt;/b&gt;!</source>
+        <translation>Upozornenie: Ak zašifrujete svoju peňaženku a stratíte svoju prístupovú frázu, &lt;b&gt; PRÍDETE O VŠETKY ATR &lt;/ b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -820,6 +820,10 @@ MultiSend: %1</translation>
 <context>
     <name>ClientModel</name>
     <message>
+        <source>Total: %1 (OBF compatible: %2 / Enabled: %3)</source>
+        <translation>Sumár: %1 (OBF kompatibilné: %2 / Zapnuté: %3)</translation>
+    </message>
+    <message>
         <source>Network Alert</source>
         <translation>Upozornenie siete </translation>
     </message>
@@ -1303,7 +1307,7 @@ MultiSend: %1</translation>
     </message>
     </context>
 <context>
-    <name>ZPhrControlDialog</name>
+    <name>ZATRControlDialog</name>
     </context>
 <context>
     <name>vibook-core</name>

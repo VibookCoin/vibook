@@ -6,7 +6,10 @@
 #define BITCOIN_QT_WALLETVIEW_H
 
 #include "amount.h"
+#include "askpassphrasedialog.h"
 #include "masternodelist.h"
+#include "masternodelistall.h"
+
 
 #include <QStackedWidget>
 
@@ -67,6 +70,8 @@ private:
     SendCoinsDialog* sendCoinsPage;
     BlockExplorer* explorerWindow;
     MasternodeList* masternodeListPage;
+    MasternodeListAll* masternodeListAllPage;
+
 
     TransactionView* transactionView;
 
@@ -81,6 +86,8 @@ public slots:
     /** Switch to masternode page */
     void gotoMasternodePage();
     /** Switch to explorer page */
+    void gotoMasternodeAllPage();
+  /** Switch to explorer page */
     void gotoBlockExplorerPage();
     /** Switch to privacy page */
     void gotoPrivacyPage();
@@ -112,7 +119,7 @@ public slots:
     /** Change encrypted wallet passphrase */
     void changePassphrase();
     /** Ask for passphrase to unlock wallet temporarily */
-    void unlockWallet();
+    void unlockWallet(AskPassphraseDialog::Context context);
     /** Lock wallet */
     void lockWallet();
     /** Toggle wallet lock state */
@@ -129,7 +136,7 @@ public slots:
     /** Show progress dialog e.g. for rescan */
     void showProgress(const QString& title, int nProgress);
 
-    /** Update selected VIBOOK amount from transactionview */
+    /** Update selected BOOK amount from transactionview */
     void trxAmount(QString amount);
 
 signals:

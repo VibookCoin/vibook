@@ -176,7 +176,7 @@
         <translation>Bekræft, og tegnebogen krypteres.</translation>
     </message>
     <message>
-        <source>ViBOOK will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your VIBOOKs from being stolen by malware infecting your computer.</source>
+        <source>ViBOOK will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ATRs from being stolen by malware infecting your computer.</source>
         <translation>ViBOOK vil lukke ned for at færdiggøre kryptograferingsprocesserne. Husk at kryptering alene ikke sikrer mod tyveri af mønterne fra malware eller virus på computeren.</translation>
     </message>
     <message>
@@ -184,8 +184,8 @@
         <translation>Er du sikker på, at du vil kryptere din tegnebog?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VIBOOK&lt;/b&gt;!</source>
-        <translation>Advarsel! Hvis du krypterer din tegnebog og mister dit password vil du &lt;b&gt;MISTE ALLE DINE VIBOOK&lt;/b&gt;. Passworded kan ikke genskabes.</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ATR&lt;/b&gt;!</source>
+        <translation>Advarsel! Hvis du krypterer din tegnebog og mister dit password vil du &lt;b&gt;MISTE ALLE DINE ATR&lt;/b&gt;. Passworded kan ikke genskabes.</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -819,6 +819,10 @@ Adresse: %4
 </context>
 <context>
     <name>ClientModel</name>
+    <message>
+        <source>Total: %1 (OBF compatible: %2 / Enabled: %3)</source>
+        <translation>I alt: %1 (OBF kompatible: %2 / Aktiverede: %3)</translation>
+    </message>
     <message>
         <source>Network Alert</source>
         <translation>Netværksalarm!</translation>
@@ -1504,32 +1508,32 @@ Kontroller adressen og prøv igen.</translation>
         <translation>Vælg tilsløringsniveau</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 VIBOOK</source>
-        <translation>Brug 2 separate masternoder for at tilsløre beløb op til 10000 VIBOOK</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 ATR</source>
+        <translation>Brug 2 separate masternoder for at tilsløre beløb op til 10000 ATR</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 VIBOOK</source>
-        <translation>Brug 8 separate masternoder for at tilsløre op til 10000 VIBOOK</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 ATR</source>
+        <translation>Brug 8 separate masternoder for at tilsløre op til 10000 ATR</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Brug 16 separate masternoder</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 VIBOOK to anonymize 10000 VIBOOK</source>
-        <translation>Dette valg er det hurtigste og vil koste i omegnen af 0.025 VIBOOK for at anonymiser 10000 VIBOOK</translation>
+        <source>This option is the quickest and will cost about ~0.025 ATR to anonymize 10000 ATR</source>
+        <translation>Dette valg er det hurtigste og vil koste i omegnen af 0.025 ATR for at anonymiser 10000 ATR</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 VIBOOK to anonymize 10000 VIBOOK</source>
-        <translation>Dette valg er relativt hurtigt og vil koste i omegnen af 0.05 VIBOOK for at anonymiser 10000 VIBOOK</translation>
+        <source>This option is moderately fast and will cost about 0.05 ATR to anonymize 10000 ATR</source>
+        <translation>Dette valg er relativt hurtigt og vil koste i omegnen af 0.05 ATR for at anonymiser 10000 ATR</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Denne mulighed er den langsomste og det mest sikre valg. Valg af maksimal tilsløring vil koste</translation>
     </message>
     <message>
-        <source>0.1 VIBOOK per 10000 VIBOOK you anonymize.</source>
-        <translation>0.1 pr 10000 VIBOOK for at tilsløre.</translation>
+        <source>0.1 ATR per 10000 ATR you anonymize.</source>
+        <translation>0.1 pr 10000 ATR for at tilsløre.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -2697,8 +2701,8 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>UTXO størrelse:</translation>
     </message>
     <message>
-        <source>0 VIBOOK</source>
-        <translation>0 VIBOOK</translation>
+        <source>0 ATR</source>
+        <translation>0 ATR</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2741,12 +2745,12 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>Bekræftelsestid</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uVIBOOKs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uVIBOOKs in fee,&lt;br /&gt;while "at least" pays 1000 uVIBOOKs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Hvis den brugerfastsatte gebyrbetaling er sat til 1000 uVIBOOKs og transaktionen kun fylder 250 bytes, så vil "pr. kilobyte" kun udbetale 250 uVIBOOK i gebyr, &lt;br /&gt; mens "mindst" udbetaler 1000 uVIBOOKs. For transaktioner større end en kilobyte betales i begge tilfælde i forhold til antallet af kilobytes </translation>
+        <source>If the custom fee is set to 1000 uATRs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uATRs in fee,&lt;br /&gt;while "at least" pays 1000 uATRs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Hvis den brugerfastsatte gebyrbetaling er sat til 1000 uATRs og transaktionen kun fylder 250 bytes, så vil "pr. kilobyte" kun udbetale 250 uATR i gebyr, &lt;br /&gt; mens "mindst" udbetaler 1000 uATRs. For transaktioner større end en kilobyte betales i begge tilfælde i forhold til antallet af kilobytes </translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uVIBOOKs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uVIBOOKs in fee,&lt;br /&gt;while "total at least" pays 1000 uVIBOOKs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Hvis den brugerfastsatte gebyrbetaling er sat til 1000 uVIBOOKs og transaktionen kun fylder 250 bytes, så vil "pr. kilobyte" kun udbetale 250 uVIBOOK i gebyr, &lt;br /&gt; mens "Total-mindst" udbetaler 1000 uVIBOOKs. For transaktioner større end en kilobyte betales i begge tilfælde i forhold til antallet af kilobytes </translation>
+        <source>If the custom fee is set to 1000 uATRs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uATRs in fee,&lt;br /&gt;while "total at least" pays 1000 uATRs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Hvis den brugerfastsatte gebyrbetaling er sat til 1000 uATRs og transaktionen kun fylder 250 bytes, så vil "pr. kilobyte" kun udbetale 250 uATR i gebyr, &lt;br /&gt; mens "Total-mindst" udbetaler 1000 uATRs. For transaktioner større end en kilobyte betales i begge tilfælde i forhold til antallet af kilobytes </translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for ViBOOK transactions than the network can process.</source>
@@ -3717,8 +3721,8 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>Send mønter</translation>
     </message>
     <message>
-        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 VIBOOK.</source>
-        <translation>SwiftTx understøtter ikke afsendelse af så store beløb endnu. Transaktioner er for tiden begrænsede til %1VIBOOK.</translation>
+        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 ATR.</source>
+        <translation>SwiftTx understøtter ikke afsendelse af så store beløb endnu. Transaktioner er for tiden begrænsede til %1ATR.</translation>
     </message>
 </context>
 <context>
@@ -3761,7 +3765,7 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
     </message>
 </context>
 <context>
-    <name>ZPhrControlDialog</name>
+    <name>ZATRControlDialog</name>
     <message>
         <source>0</source>
         <translation>0</translation>
@@ -3855,12 +3859,12 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>Udfør en kommando når den bedste blok ændres (%s in cmd erstattes med blok hashen)</translation>
     </message>
     <message>
-        <source>Fees (in VIBOOK/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Gebyrer (in VIBOOK/kb) lavere end dette betragtes som et nul-gebyr for at videresende (default: %s)</translation>
+        <source>Fees (in ATR/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Gebyrer (in ATR/kb) lavere end dette betragtes som et nul-gebyr for at videresende (default: %s)</translation>
     </message>
     <message>
-        <source>Fees (in VIBOOK/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Gebyrer (in VIBOOK/kb) lavere end dette betragtes som et nul-gebyr for at oprette en transaktion (default: %s)</translation>
+        <source>Fees (in ATR/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Gebyrer (in ATR/kb) lavere end dette betragtes som et nul-gebyr for at oprette en transaktion (default: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -3869,6 +3873,10 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
     <message>
         <source>Found unconfirmed denominated outputs, will wait till they confirm to continue.</source>
         <translation>Der er fundet ubekræftede designerede outputs. Vent indtil de bekræftes for at fortsætte.</translation>
+    </message>
+    <message>
+        <source>How thorough the block verification of -checkblocks is (0-4, default: %u)</source>
+        <translation>Hvor grundig er blokkens verificeringer af -checkblocks er (0-4, default %u)</translation>
     </message>
     <message>
         <source>If paytxfee is not set, include enough fee so transactions begin confirmation on average within n blocks (default: %u)</source>
@@ -3987,12 +3995,12 @@ For eksempel: alertnotify=Echo %% | mail - s "ViBOOK ALARM!" e-mail@administrato
         <translation>Det er ikke muligt at allokere tilstrækkeligt med tilsløret designeret indestående for at gennemføre denne transaktion.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 VIBOOK.</source>
-        <translation>Det er ikke muligt at allokere tilstrækkeligt med tilsløret  ikke-designeret indestående for at gennemføre denne transaktion, der ikke ækvivalerer 10000 VIBOOK.</translation>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 ATR.</source>
+        <translation>Det er ikke muligt at allokere tilstrækkeligt med tilsløret  ikke-designeret indestående for at gennemføre denne transaktion, der ikke ækvivalerer 10000 ATR.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 VIBOOK.</source>
-        <translation>Det var ikke muligt at allokere tilstrækkelige midler til denne transaktion som er forskellig fra 10000 VIBOOK.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 ATR.</source>
+        <translation>Det var ikke muligt at allokere tilstrækkelige midler til denne transaktion som er forskellig fra 10000 ATR.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -4039,8 +4047,8 @@ For eksempel: alertnotify=Echo %% | mail - s "ViBOOK ALARM!" e-mail@administrato
         <translation>Der skal angives en masternodeprivkey i konfigurationen. For mere information, se i dokumentationen.</translation>
     </message>
     <message>
-        <source>(22262 could be used only on mainnet)</source>
-        <translation>(22262 kunne kun bruges på hovednettet)</translation>
+        <source>(46200 could be used only on mainnet)</source>
+        <translation>(46200 kunne kun bruges på hovednettet)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -4051,8 +4059,8 @@ For eksempel: alertnotify=Echo %% | mail - s "ViBOOK ALARM!" e-mail@administrato
         <translation>(default: 1)</translation>
     </message>
     <message>
-        <source>(must be 22262 for mainnet)</source>
-        <translation>(skal være 22262 for hovednettet)</translation>
+        <source>(must be 46200 for mainnet)</source>
+        <translation>(skal være 46200 for hovednettet)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>
@@ -4155,8 +4163,12 @@ For eksempel: alertnotify=Echo %% | mail - s "ViBOOK ALARM!" e-mail@administrato
         <translation>Copyright (C) 2014-%i The Dash Core Developers </translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The ViBOOK Core Developers</source>
-        <translation>Copyright (C) 2015-%i The ViBOOK Core Developers</translation>
+        <source>Copyright (C) 2015-%i The PIVX Core Developers</source>
+        <translation>Copyright (C) 2015-%i The PIVX Core Developers</translation>
+    </message>
+    <message>
+        <source>Copyright (C) 2018-%i The ViBOOK Core Developers</source>
+        <translation>Copyright (C) 2018-%i The ViBOOK Core Developers</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>
@@ -4279,8 +4291,8 @@ For eksempel: alertnotify=Echo %% | mail - s "ViBOOK ALARM!" e-mail@administrato
         <translation>Læsning af blokken mislykkedes</translation>
     </message>
     <message>
-        <source>Fee (in VIBOOK/kB) to add to transactions you send (default: %s)</source>
-        <translation>Gebyr (i VIBOOK/kB) som skal tilføjes transaktionen der sendes (default: %s)</translation>
+        <source>Fee (in ATR/kB) to add to transactions you send (default: %s)</source>
+        <translation>Gebyr (i ATR/kB) som skal tilføjes transaktionen der sendes (default: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -4349,6 +4361,14 @@ For eksempel: alertnotify=Echo %% | mail - s "ViBOOK ALARM!" e-mail@administrato
     <message>
         <source>Insufficient funds.</source>
         <translation>Utilstrækkelige midler</translation>
+    </message>
+    <message>
+        <source>Invalid -onion address: '%s'</source>
+        <translation>Ugyldig -onion adresse: '%s'</translation>
+    </message>
+    <message>
+        <source>Invalid -proxy address: '%s'</source>
+        <translation>Ugyldig -proxy adresse: '%s'</translation>
     </message>
     <message>
         <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s'</source>

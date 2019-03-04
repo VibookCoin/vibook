@@ -50,19 +50,18 @@ QT_TRANSLATE_NOOP("vibook-core", ""
 "Delete all wallet transactions and only recover those parts of the "
 "blockchain through -rescan on startup"),
 QT_TRANSLATE_NOOP("vibook-core", ""
-"Disable all ViBOOK specific functionality (Masternodes, Obfuscation, SwiftX, "
+"Disable all ViBOOK specific functionality (Masternodes, Zerocoin, SwiftX, "
 "Budgeting) (0-1, default: %u)"),
 QT_TRANSLATE_NOOP("vibook-core", ""
 "Distributed under the MIT software license, see the accompanying file "
 "COPYING or <http://www.opensource.org/licenses/mit-license.php>."),
 QT_TRANSLATE_NOOP("vibook-core", ""
+"Enable SwiftX, show confirmations for locked transactions (bool, default: %s)"),
+QT_TRANSLATE_NOOP("vibook-core", ""
 "Enable automatic wallet backups triggered after each zBOOK minting (0-1, "
 "default: %u)"),
 QT_TRANSLATE_NOOP("vibook-core", ""
 "Enable spork administration functionality with the appropriate private key."),
-QT_TRANSLATE_NOOP("vibook-core", ""
-"Enable SwiftX, show confirmations for locked transactions (bool, default: "
-"%s)"),
 QT_TRANSLATE_NOOP("vibook-core", ""
 "Enter regression test mode, which uses a special chain in which blocks can "
 "be solved instantly."),
@@ -90,10 +89,10 @@ QT_TRANSLATE_NOOP("vibook-core", ""
 "Execute command when the best block changes (%s in cmd is replaced by block "
 "hash)"),
 QT_TRANSLATE_NOOP("vibook-core", ""
-"Fees (in VIBOOK/Kb) smaller than this are considered zero fee for relaying "
+"Fees (in BOOK/Kb) smaller than this are considered zero fee for relaying "
 "(default: %s)"),
 QT_TRANSLATE_NOOP("vibook-core", ""
-"Fees (in VIBOOK/Kb) smaller than this are considered zero fee for transaction "
+"Fees (in BOOK/Kb) smaller than this are considered zero fee for transaction "
 "creation (default: %s)"),
 QT_TRANSLATE_NOOP("vibook-core", ""
 "Flush database activity from memory pool to disk log every <n> megabytes "
@@ -160,8 +159,8 @@ QT_TRANSLATE_NOOP("vibook-core", ""
 QT_TRANSLATE_NOOP("vibook-core", ""
 "Support filtering of blocks and transaction with bloom filters (default: %u)"),
 QT_TRANSLATE_NOOP("vibook-core", ""
-"SwiftX requires inputs with at least 6 confirmations, you might need to "
-"wait a few minutes and try again."),
+"SwiftX requires inputs with at least 6 confirmations, you might need to wait "
+"a few minutes and try again."),
 QT_TRANSLATE_NOOP("vibook-core", ""
 "This is a pre-release test build - use at your own risk - do not use for "
 "staking or merchant applications!"),
@@ -188,10 +187,10 @@ QT_TRANSLATE_NOOP("vibook-core", ""
 "Unable to locate enough Obfuscation denominated funds for this transaction."),
 QT_TRANSLATE_NOOP("vibook-core", ""
 "Unable to locate enough Obfuscation non-denominated funds for this "
-"transaction that are not equal 10000 VIBOOK."),
+"transaction that are not equal 10000 BOOK."),
 QT_TRANSLATE_NOOP("vibook-core", ""
 "Unable to locate enough funds for this transaction that are not equal 10000 "
-"VIBOOK."),
+"BOOK."),
 QT_TRANSLATE_NOOP("vibook-core", ""
 "Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: "
 "%s)"),
@@ -226,10 +225,10 @@ QT_TRANSLATE_NOOP("vibook-core", ""
 QT_TRANSLATE_NOOP("vibook-core", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("vibook-core", "(22262 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("vibook-core", "(46200 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("vibook-core", "(default: %s)"),
 QT_TRANSLATE_NOOP("vibook-core", "(default: 1)"),
-QT_TRANSLATE_NOOP("vibook-core", "(must be 22262 for mainnet)"),
+QT_TRANSLATE_NOOP("vibook-core", "(must be 46200 for mainnet)"),
 QT_TRANSLATE_NOOP("vibook-core", "<category> can be:"),
 QT_TRANSLATE_NOOP("vibook-core", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("vibook-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),
@@ -259,8 +258,8 @@ QT_TRANSLATE_NOOP("vibook-core", "Connect to a node to retrieve peer addresses, 
 QT_TRANSLATE_NOOP("vibook-core", "Connection options:"),
 QT_TRANSLATE_NOOP("vibook-core", "Copyright (C) 2009-%i The Bitcoin Core Developers"),
 QT_TRANSLATE_NOOP("vibook-core", "Copyright (C) 2014-%i The Dash Core Developers"),
-QT_TRANSLATE_NOOP("vibook-core", "Copyright (C) 2015-%i The PIVX Core Developers"),
-QT_TRANSLATE_NOOP("vibook-core", "Copyright (C) 2017-%i The ViBOOK Core Developers"),
+QT_TRANSLATE_NOOP("vibook-core", "Copyright (C) 2015-%i Pivx Core Developers"),
+QT_TRANSLATE_NOOP("vibook-core", "Copyright (C) 2018-%i The ViBOOK Core Developers"),
 QT_TRANSLATE_NOOP("vibook-core", "Corrupted block database detected"),
 QT_TRANSLATE_NOOP("vibook-core", "Could not parse -rpcbind value %s as network address"),
 QT_TRANSLATE_NOOP("vibook-core", "Could not parse masternode.conf"),
@@ -301,11 +300,12 @@ QT_TRANSLATE_NOOP("vibook-core", "Error: Disk space is low!"),
 QT_TRANSLATE_NOOP("vibook-core", "Error: Unsupported argument -tor found, use -onion."),
 QT_TRANSLATE_NOOP("vibook-core", "Error: Wallet locked, unable to create transaction!"),
 QT_TRANSLATE_NOOP("vibook-core", "Error: You already have pending entries in the Obfuscation pool"),
+QT_TRANSLATE_NOOP("vibook-core", "Failed to calculate accumulator checkpoint"),
 QT_TRANSLATE_NOOP("vibook-core", "Failed to listen on any port. Use -listen=0 if you want this."),
 QT_TRANSLATE_NOOP("vibook-core", "Failed to read block index"),
 QT_TRANSLATE_NOOP("vibook-core", "Failed to read block"),
 QT_TRANSLATE_NOOP("vibook-core", "Failed to write block index"),
-QT_TRANSLATE_NOOP("vibook-core", "Fee (in VIBOOK/kB) to add to transactions you send (default: %s)"),
+QT_TRANSLATE_NOOP("vibook-core", "Fee (in BOOK/kB) to add to transactions you send (default: %s)"),
 QT_TRANSLATE_NOOP("vibook-core", "Finalizing transaction."),
 QT_TRANSLATE_NOOP("vibook-core", "Force safe mode (default: %u)"),
 QT_TRANSLATE_NOOP("vibook-core", "Found enough users, signing ( waiting %s )"),
@@ -341,7 +341,6 @@ QT_TRANSLATE_NOOP("vibook-core", "Invalid script detected."),
 QT_TRANSLATE_NOOP("vibook-core", "Keep at most <n> unconnectable transactions in memory (default: %u)"),
 QT_TRANSLATE_NOOP("vibook-core", "Last Obfuscation was too recent."),
 QT_TRANSLATE_NOOP("vibook-core", "Last successful Obfuscation action was too recent."),
-QT_TRANSLATE_NOOP("vibook-core", "Less than 3 mints added, unable to create spend"),
 QT_TRANSLATE_NOOP("vibook-core", "Limit size of signature cache to <n> entries (default: %u)"),
 QT_TRANSLATE_NOOP("vibook-core", "Line: %d"),
 QT_TRANSLATE_NOOP("vibook-core", "Listen for JSON-RPC connections on <port> (default: %u or testnet: %u)"),
@@ -395,6 +394,7 @@ QT_TRANSLATE_NOOP("vibook-core", "Rebuild block chain index from current blk000?
 QT_TRANSLATE_NOOP("vibook-core", "Recalculating coin supply may take 30-60 minutes..."),
 QT_TRANSLATE_NOOP("vibook-core", "Recalculating supply statistics may take 30-60 minutes..."),
 QT_TRANSLATE_NOOP("vibook-core", "Receive and display P2P network alerts (default: %u)"),
+QT_TRANSLATE_NOOP("vibook-core", "Reindex the accumulator database"),
 QT_TRANSLATE_NOOP("vibook-core", "Relay and mine data carrier transactions (default: %u)"),
 QT_TRANSLATE_NOOP("vibook-core", "Relay non-P2SH multisig (default: %u)"),
 QT_TRANSLATE_NOOP("vibook-core", "Rescan the block chain for missing wallet transactions"),

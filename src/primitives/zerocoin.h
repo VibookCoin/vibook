@@ -1,8 +1,9 @@
-// Copyright (c) 2017 The PIVX developers
+// Copyright (c) 2017 The PIVX developers	
+// Copyright (c) 2017 The ViBOOK developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef VIBOOK_ZEROCOIN_H
-#define VIBOOK_ZEROCOIN_H
+#ifndef ViBOOK_ZEROCOIN_H
+#define ViBOOK_ZEROCOIN_H
 
 #include <amount.h>
 #include <limits.h>
@@ -189,4 +190,4 @@ public:
     int GetNeededSpends();
 };
 
-#endif //VIBOOK_ZEROCOIN_H
+#endif //ViBOOK_ZEROCOIN_H
