@@ -1,5 +1,5 @@
 ---
-name: "vibook-win-1.2"
+name: "vibook-win-1.1"
 enable_cache: true
 suites:
 - "trusty"
@@ -22,7 +22,7 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "https://github.com/eastcoastcrypto/ViBOOK"
+- "url": "https://github.com/insta-cash/vibook"
   "dir": "vibook"
 files: []
 script: |

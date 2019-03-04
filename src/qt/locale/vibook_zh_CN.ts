@@ -176,16 +176,16 @@
         <translation>确认钱包加密</translation>
     </message>
     <message>
-        <source>ViBOOK will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your VIBOOKs from being stolen by malware infecting your computer.</source>
-        <translation>ViBOOK将关闭以完成加密过程。但是，仅仅加密您的钱包是不够的，因为它并不能阻止恶意软件从您的电脑里面偷取VIBOOKs。</translation>
+        <source>ViBOOK will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ATRs from being stolen by malware infecting your computer.</source>
+        <translation>ViBOOK将关闭以完成加密过程。但是，仅仅加密您的钱包是不够的，因为它并不能阻止恶意软件从您的电脑里面偷取ATRs。</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>您确定加密您的钱包吗？</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VIBOOK&lt;/b&gt;!</source>
-        <translation>注意：请妥善保管好你的密码，因为在加密后，没有密码将无法打开钱包。这将会让您&lt;b&gt;损失钱包中所有的VIBOOK&lt;/b&gt;！</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ATR&lt;/b&gt;!</source>
+        <translation>注意：请妥善保管好你的密码，因为在加密后，没有密码将无法打开钱包。这将会让您&lt;b&gt;损失钱包中所有的ATR&lt;/b&gt;！</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -403,7 +403,7 @@
     </message>
     <message>
         <source>&amp;Overview</source>
-        <translation>&amp;O概述</translation>
+        <translation>&amp;概述</translation>
     </message>
     <message>
         <source>Show general overview of wallet</source>
@@ -411,15 +411,15 @@
     </message>
     <message>
         <source>&amp;Send</source>
-        <translation>&amp;S发送</translation>
+        <translation>&amp;发送</translation>
     </message>
     <message>
         <source>&amp;Receive</source>
-        <translation>&amp;R接收</translation>
+        <translation>&amp;接收</translation>
     </message>
     <message>
         <source>&amp;Transactions</source>
-        <translation>&amp;T交易</translation>
+        <translation>&amp;交易</translation>
     </message>
     <message>
         <source>Browse transaction history</source>
@@ -443,11 +443,11 @@
     </message>
     <message>
         <source>&amp;Options...</source>
-        <translation>&amp;Q选项</translation>
+        <translation>&amp;选项</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
-        <translation>&amp;S显示/隐藏</translation>
+        <translation>&amp;显示/隐藏</translation>
     </message>
     <message>
         <source>Show or hide the main Window</source>
@@ -455,7 +455,7 @@
     </message>
     <message>
         <source>&amp;Encrypt Wallet...</source>
-        <translation>&amp;E加密钱包...</translation>
+        <translation>&amp;加密钱包...</translation>
     </message>
     <message>
         <source>Encrypt the private keys that belong to your wallet</source>
@@ -463,7 +463,7 @@
     </message>
     <message>
         <source>&amp;Backup Wallet...</source>
-        <translation>&amp;B备份钱包...</translation>
+        <translation>&amp;备份钱包...</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -471,7 +471,7 @@
     </message>
     <message>
         <source>&amp;Change Passphrase...</source>
-        <translation>&amp;C修改密码</translation>
+        <translation>&amp;修改密码</translation>
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>
@@ -479,7 +479,7 @@
     </message>
     <message>
         <source>&amp;Unlock Wallet...</source>
-        <translation>&amp;U解锁钱包...</translation>
+        <translation>&amp;解锁钱包...</translation>
     </message>
     <message>
         <source>Unlock wallet</source>
@@ -487,11 +487,11 @@
     </message>
     <message>
         <source>&amp;Lock Wallet</source>
-        <translation>&amp;L锁定钱包</translation>
+        <translation>&amp;锁定钱包</translation>
     </message>
     <message>
         <source>Sign &amp;message...</source>
-        <translation>S签名&amp;消息</translation>
+        <translation>签名&amp;消息</translation>
     </message>
     <message>
         <source>&amp;Verify message...</source>
@@ -499,7 +499,7 @@
     </message>
     <message>
         <source>&amp;Information</source>
-        <translation>&amp;I信息</translation>
+        <translation>&amp;信息</translation>
     </message>
     <message>
         <source>Show diagnostic information</source>
@@ -507,7 +507,7 @@
     </message>
     <message>
         <source>&amp;Debug console</source>
-        <translation>&amp;D调试控制台</translation>
+        <translation>&amp;调试控制台</translation>
     </message>
     <message>
         <source>Open debugging console</source>
@@ -515,7 +515,7 @@
     </message>
     <message>
         <source>&amp;Network Monitor</source>
-        <translation>&amp;N网络监视器</translation>
+        <translation>&amp;网络监视器</translation>
     </message>
     <message>
         <source>Show network monitor</source>
@@ -523,7 +523,7 @@
     </message>
     <message>
         <source>&amp;Peers list</source>
-        <translation>&amp;P并列列表</translation>
+        <translation>&amp;并列列表</translation>
     </message>
     <message>
         <source>Show peers info</source>
@@ -531,7 +531,7 @@
     </message>
     <message>
         <source>Wallet &amp;Repair</source>
-        <translation>W钱包&amp;修复</translation>
+        <translation>钱包&amp;修复</translation>
     </message>
     <message>
         <source>Show wallet repair options</source>
@@ -551,7 +551,7 @@
     </message>
     <message>
         <source>&amp;Sending addresses...</source>
-        <translation>&amp;S发送地址...</translation>
+        <translation>&amp;发送地址...</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -559,7 +559,7 @@
     </message>
     <message>
         <source>&amp;Receiving addresses...</source>
-        <translation>&amp;R接收地址</translation>
+        <translation>&amp;接收地址</translation>
     </message>
     <message>
         <source>Show the list of used receiving addresses and labels</source>
@@ -567,15 +567,11 @@
     </message>
     <message>
         <source>Open &amp;URI...</source>
-        <translation>O打开&amp;URI</translation>
+        <translation>打开&amp;URI</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
-        <translation>&amp;C命令行选项</translation>
-    </message>
-    <message numerus="yes">
-        <source>Processed %n blocks of transaction history.</source>
-        <translation><numerusform>处理的 %n个交易记录块。</numerusform></translation>
+        <translation>&amp;命令行选项</translation>
     </message>
     <message>
         <source>Synchronizing additional data: %p%</source>
@@ -583,19 +579,19 @@
     </message>
     <message>
         <source>&amp;File</source>
-        <translation>&amp;F文件</translation>
+        <translation>&amp;文件</translation>
     </message>
     <message>
         <source>&amp;Settings</source>
-        <translation>&amp;S设置</translation>
+        <translation>&amp;设置</translation>
     </message>
     <message>
         <source>&amp;Tools</source>
-        <translation>&amp;T工具</translation>
+        <translation>&amp;工具</translation>
     </message>
     <message>
         <source>&amp;Help</source>
-        <translation>&amp;H帮助</translation>
+        <translation>&amp;帮助</translation>
     </message>
     <message>
         <source>Tabs toolbar</source>
@@ -603,7 +599,7 @@
     </message>
     <message>
         <source>ViBOOK Core</source>
-        <translation>ViBOOK Core</translation>
+        <translation>ViBOOK 核心</translation>
     </message>
     <message>
         <source>Send coins to a ViBOOK address</source>
@@ -614,16 +610,8 @@
         <translation>请求支付（生成二维码和vibook：URIs）</translation>
     </message>
     <message>
-        <source>&amp;Privacy</source>
-        <translation>&amp;P隐私</translation>
-    </message>
-    <message>
-        <source>Privacy Action for zBOOK and Obfuscation</source>
-        <translation>zBOOK和混淆的隐私操作</translation>
-    </message>
-    <message>
         <source>&amp;Masternodes</source>
-        <translation>&amp;M主节点</translation>
+        <translation>&amp;主节点</translation>
     </message>
     <message>
         <source>Browse masternodes</source>
@@ -631,11 +619,11 @@
     </message>
     <message>
         <source>&amp;About ViBOOK Core</source>
-        <translation>&amp;A关于ViBOOK Core</translation>
+        <translation>&amp;关于ViBOOK核心</translation>
     </message>
     <message>
         <source>Show information about ViBOOK Core</source>
-        <translation>显示ViBOOK  Core的相关信息</translation>
+        <translation>显示ViBOOK核心的相关信息</translation>
     </message>
     <message>
         <source>Modify configuration options for ViBOOK</source>
@@ -659,7 +647,7 @@
     </message>
     <message>
         <source>&amp;MultiSend</source>
-        <translation>&amp;M多重发送</translation>
+        <translation>&amp;多重发送</translation>
     </message>
     <message>
         <source>MultiSend Settings</source>
@@ -683,7 +671,7 @@
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
-        <translation>&amp;B区块浏览器</translation>
+        <translation>&amp;区块浏览器</translation>
     </message>
     <message>
         <source>Block explorer window</source>
@@ -691,16 +679,11 @@
     </message>
     <message>
         <source>Show the ViBOOK Core help message to get a list with possible ViBOOK command-line options</source>
-        <translation>显示ViBOOK Core帮助信息并获取ViBOOK命令行选项列表</translation>
+        <translation>显示ViBOOK Core帮助信息以获取可能的ViBOOK命令行选项的列表</translation>
     </message>
     <message>
         <source>ViBOOK Core client</source>
-        <translation>ViBOOK Core 客户端</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n active connection(s) to ViBOOK network</source>
-        <translation><numerusform>%n 活动连接到ViBOOK网络
-</numerusform></translation>
+        <translation>ViBOOK核心客户端</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -721,22 +704,6 @@
     <message>
         <source>Up to date</source>
         <translation>最新</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n hour(s)</source>
-        <translation><numerusform>%n 小时</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n day(s)</source>
-        <translation><numerusform>%n 天</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n week(s)</source>
-        <translation><numerusform>%n 星期</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n year(s)</source>
-        <translation><numerusform>%n 年</numerusform></translation>
     </message>
     <message>
         <source>%1 behind</source>
@@ -767,18 +734,6 @@
         <translation>信息</translation>
     </message>
     <message>
-        <source>Sent transaction</source>
-        <translation>发送交易</translation>
-    </message>
-    <message>
-        <source>Incoming transaction</source>
-        <translation>接收交易</translation>
-    </message>
-    <message>
-        <source>Sent MultiSend transaction</source>
-        <translation>发送MultiSend交易</translation>
-    </message>
-    <message>
         <source>Date: %1
 Amount: %2
 Type: %3
@@ -789,14 +744,6 @@ Address: %4
 类型：%3
 地址：%4
 </translation>
-    </message>
-    <message>
-        <source>Active</source>
-        <translation>激活</translation>
-    </message>
-    <message>
-        <source>Not Active</source>
-        <translation>未激活</translation>
     </message>
     </context>
 <context>
@@ -866,30 +813,14 @@ Address: %4
     <name>HelpMessageDialog</name>
     <message>
         <source>ViBOOK Core</source>
-        <translation>ViBOOK Core</translation>
-    </message>
-    <message>
-        <source>About ViBOOK Core</source>
-        <translation>关于ViBOOK Core</translation>
+        <translation>ViBOOK 核心</translation>
     </message>
     </context>
 <context>
     <name>Intro</name>
     <message>
-        <source>Welcome to ViBOOK Core.</source>
-        <translation>欢迎使用 ViBOOK Core</translation>
-    </message>
-    <message>
-        <source>As this is the first time the program is launched, you can choose where ViBOOK Core will store its data.</source>
-        <translation>由于这是该程序第一次启动，您可以选择存储ViBOOK Core 数据的位置。</translation>
-    </message>
-    <message>
-        <source>ViBOOK Core will download and store a copy of the ViBOOK block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>ViBOOK Core将下载并存储ViBOOK区块链副本。 至少 %1 GB的数据将存储在此目录中，并且会随着时间的推移而增长。 钱包也将存储在此目录中。</translation>
-    </message>
-    <message>
         <source>ViBOOK Core</source>
-        <translation>ViBOOK Core</translation>
+        <translation>ViBOOK 核心</translation>
     </message>
     <message>
         <source>Error</source>
@@ -909,10 +840,6 @@ Address: %4
     <message>
         <source>Address</source>
         <translation>地址</translation>
-    </message>
-    <message>
-        <source>Active</source>
-        <translation>激活</translation>
     </message>
     <message>
         <source>S&amp;tart alias</source>
@@ -1056,7 +983,7 @@ Address: %4
     </message>
     <message>
         <source>Active command-line options that override above options:</source>
-        <translation>激活上述选项的命令行选项：</translation>
+        <translation>上述选项的主动命令行选项：</translation>
     </message>
     <message>
         <source>Reset all client options to default.</source>
@@ -1509,7 +1436,7 @@ Address: %4
     <name>SplashScreen</name>
     <message>
         <source>ViBOOK Core</source>
-        <translation>ViBOOK Core</translation>
+        <translation>ViBOOK 核心</translation>
     </message>
     </context>
 <context>
@@ -1588,7 +1515,7 @@ Address: %4
     </message>
     </context>
 <context>
-    <name>ZPhrControlDialog</name>
+    <name>ZATRControlDialog</name>
     </context>
 <context>
     <name>vibook-core</name>

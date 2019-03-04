@@ -3,7 +3,7 @@ ViBOOK Core
 
 Setup
 ---------------------
-[ViBOOK Core](http://ViBOOKcoin.com) is the original ViBOOK client and it builds the backbone of the network. However, it downloads and stores the entire history of ViBOOK transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[ViBOOK Core](http://vibook.org/wallet) is the original ViBOOK client and it builds the backbone of the network. However, it downloads and stores the entire history of ViBOOK transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
@@ -28,8 +28,9 @@ Drag ViBOOK-Qt to your applications folder, and then run ViBOOK-Qt.
 
 * See the documentation at the [ViBOOK Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
 for help and more information.
-* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php) or on the [ViBOOK Forum](http://ViBOOKcoin.com/).
-* Join one of our Discord groups [ViBOOK Discord Groups](https://discord.gg/YcnvMqt).
+* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [ViBOOK Forum](http://forum.vibook.org/).
+* Join our Discord server [Discord Server](https://discord.vibook.org)
+* Join one of our Slack groups [ViBOOK Slack Groups](https://vibook.org/slack-logins/) (Main community is replaced by Discord).
 
 Building
 ---------------------
@@ -41,7 +42,7 @@ The following are developer notes on how to build ViBOOK on your native platform
 
 Development
 ---------------------
-The ViBOOK repo's [root README](https://github.com/eastcoastcrypto/ViBOOK/blob/master/README.md) contains relevant information on the development process and automated testing.
+The ViBOOK repo's [root README](https://github.com/ViBOOK-Project/ViBOOK/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)
@@ -55,8 +56,8 @@ The ViBOOK repo's [root README](https://github.com/eastcoastcrypto/ViBOOK/blob/m
 
 ### Resources
 
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) .
-* Join the [ViBOOK-Dev] Discord groups [ViBOOK Discord Groups](https://discord.gg/YcnvMqt).
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [ViBOOK](http://forum.vibook.org/) forum.
+* Join the [ViBOOK-Dev](https://vibook-dev.slack.com/) Slack group ([Sign-Up](https://vibook-dev.herokuapp.com/)).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

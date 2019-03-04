@@ -157,7 +157,7 @@
     </message>
     <message>
         <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
-        <translation>이 작업은 지갑 암호화 해제를 하셔야 가능합니다.</translation>
+        <translation>이 작업은 지갑 암호화 해제를 위해 지갑 암호가 필요합니다.</translation>
     </message>
     <message>
         <source>Decrypt wallet</source>
@@ -176,16 +176,16 @@
         <translation>지갑 암호화 확인</translation>
     </message>
     <message>
-        <source>ViBOOK will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your VIBOOKs from being stolen by malware infecting your computer.</source>
-        <translation>ViBOOK는 이제 암호화 프로세스를 마치기 위해 닫힐것입니다. 지갑을 암호화하더라도 맬웨어로 인한 VIBOOKs 의 도난당하는 것을 완벽하게 보호 할 수는 없습니다.</translation>
+        <source>ViBOOK will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ATRs from being stolen by malware infecting your computer.</source>
+        <translation>ViBOOK는 이제 암호화 프로세스를 마치기 위해 닫힐것입니다. 지갑을 암호화하더라도 맬웨어로 인한 ATRs 의 도난당하는 것을 완벽하게 보호 할 수는 없습니다.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>지갑을 암호화 하시겠습니까?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VIBOOK&lt;/b&gt;!</source>
-        <translation>경고: 지갑 암호화 후 암호를 분실하게 되면 &lt;b&gt;모든 VIBOOK를 잃게 됩니다&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ATR&lt;/b&gt;!</source>
+        <translation>경고: 지갑 암호화 후 암호를 분실하게 되면 &lt;b&gt;모든 ATR를 잃게 됩니다&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -213,7 +213,7 @@
     </message>
     <message>
         <source>The passphrase entered for the wallet decryption was incorrect.</source>
-        <translation>입력한 지갑 암호가 올바르지 않습니다.</translation>
+        <translation>지갑 암호화 해제를 위해 입력한 지갑 암호가 올바르지 않습니다.</translation>
     </message>
     <message>
         <source>Wallet decryption failed</source>
@@ -543,7 +543,7 @@
     </message>
     <message>
         <source>Show Automatic &amp;Backups</source>
-        <translation>자동 &amp;백업 폴더 열기</translation>
+        <translation>자동 &amp;백업 표시</translation>
     </message>
     <message>
         <source>Show automatically created wallet backups</source>
@@ -572,10 +572,6 @@
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;명령행 옵션</translation>
-    </message>
-    <message numerus="yes">
-        <source>Processed %n blocks of transaction history.</source>
-        <translation><numerusform>트랜잭션 기록의 %n 블록을 처리함</numerusform></translation>
     </message>
     <message>
         <source>Synchronizing additional data: %p%</source>
@@ -612,14 +608,6 @@
     <message>
         <source>Request payments (generates QR codes and vibook: URIs)</source>
         <translation>결제 요청 (QR 코드 및 vibook: URI 생성)</translation>
-    </message>
-    <message>
-        <source>&amp;Privacy</source>
-        <translation>&amp;프라이버시</translation>
-    </message>
-    <message>
-        <source>Privacy Action for zBOOK and Obfuscation</source>
-        <translation>zBOOK와 난독화를 위한 프라이버스 작업</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -697,10 +685,6 @@
         <source>ViBOOK Core client</source>
         <translation>ViBOOK Core 클라이언트</translation>
     </message>
-    <message numerus="yes">
-        <source>%n active connection(s) to ViBOOK network</source>
-        <translation><numerusform>%n 개 ViBOOK 네트웍에 연결</numerusform></translation>
-    </message>
     <message>
         <source>Synchronizing with network...</source>
         <translation>네트워크 동기화중...</translation>
@@ -721,25 +705,9 @@
         <source>Up to date</source>
         <translation>최신</translation>
     </message>
-    <message numerus="yes">
-        <source>%n hour(s)</source>
-        <translation><numerusform>%n 시간</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n day(s)</source>
-        <translation><numerusform>%n 일</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <source>%n week(s)</source>
-        <translation><numerusform>%n 주</numerusform></translation>
-    </message>
     <message>
         <source>%1 and %2</source>
         <translation>%1 그리고 %2</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n year(s)</source>
-        <translation><numerusform>%n 년</numerusform></translation>
     </message>
     <message>
         <source>%1 behind</source>
@@ -747,7 +715,7 @@
     </message>
     <message>
         <source>Catching up...</source>
-        <translation>동기화 중...</translation>
+        <translation>동기화중...</translation>
     </message>
     <message>
         <source>Last received block was generated %1 ago.</source>
@@ -771,7 +739,7 @@
     </message>
     <message>
         <source>Sent transaction</source>
-        <translation>보낸 트랜잭션</translation>
+        <translation>트랜잭션 전송</translation>
     </message>
     <message>
         <source>Incoming transaction</source>
@@ -815,7 +783,7 @@ Address: %4
     </message>
     <message>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>현재 지갑은 &lt;b&gt;암호화되어 &lt;b&gt;잠금해제되었습니다.</translation>
+        <translation>지갑은 &lt;b&gt;암호화&lt;/ b&gt;되어 있으며 현재 &lt;b&gt;잠금해제&lt;/ b&gt;되었습니다.</translation>
     </message>
     <message>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt; for anonimization and staking only</source>
@@ -831,14 +799,6 @@ Address: %4
     <message>
         <source>Blockchain Explorer</source>
         <translation>블록체인 탐색기</translation>
-    </message>
-    <message>
-        <source>Back</source>
-        <translation>뒤로</translation>
-    </message>
-    <message>
-        <source>Forward</source>
-        <translation>앞으로</translation>
     </message>
     <message>
         <source>Address / Block / Transaction</source>
@@ -860,8 +820,8 @@ Address: %4
 <context>
     <name>ClientModel</name>
     <message>
-        <source>Total: %1 (IPv4: %2 / IPv6: %3 / Tor: %4 / Unknown: %5)</source>
-        <translation>Total: %1 (IPv4: %2 / IPv6: %3 / Tor: %4 / Unknown: %5)</translation>
+        <source>Total: %1 (OBF compatible: %2 / Enabled: %3)</source>
+        <translation>총: %1 (OBF 호환: %2 / 사용됨: %3)</translation>
     </message>
     <message>
         <source>Network Alert</source>
@@ -904,7 +864,7 @@ Address: %4
     </message>
     <message>
         <source>Change:</source>
-        <translation>잔돈:</translation>
+        <translation>변경:</translation>
     </message>
     <message>
         <source>(un)select all</source>
@@ -992,7 +952,7 @@ Address: %4
     </message>
     <message>
         <source>Copy bytes</source>
-        <translation>Bytes 복사</translation>
+        <translation>bytes 복사</translation>
     </message>
     <message>
         <source>Copy priority</source>
@@ -1100,7 +1060,7 @@ Address: %4
     </message>
     <message>
         <source>(change)</source>
-        <translation>(잔돈)</translation>
+        <translation>(변경)</translation>
     </message>
 </context>
 <context>
@@ -1123,7 +1083,7 @@ Address: %4
     </message>
     <message>
         <source>The address associated with this address list entry. This can only be modified for sending addresses.</source>
-        <translation>이 주소 목록과 관련된 주소입니다. 주소를 보낼 때만 수정할 수 있습니다.</translation>
+        <translation>이 주소 목록과 관련된 주소입니다. 주소를 보낼때만 수정할 수 있습니다.</translation>
     </message>
     <message>
         <source>New receiving address</source>
@@ -1244,7 +1204,7 @@ Address: %4
     </message>
     <message>
         <source>Welcome to ViBOOK Core.</source>
-        <translation>ViBOOK Core에 오신 것을 환영합니다.</translation>
+        <translation>ViBOOK Core 환영합니다.</translation>
     </message>
     <message>
         <source>As this is the first time the program is launched, you can choose where ViBOOK Core will store its data.</source>
@@ -1548,32 +1508,32 @@ Please check the address and try again.</source>
         <translation>익명화 레벨을 선택해주세요.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 VIBOOK</source>
-        <translation>2개의 개별 마스터노드를 이용하여 최대 10000 VIBOOK 를 섞을 수 있습니다.</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 ATR</source>
+        <translation>2개의 개별 마스터노드를 이용하여 최대 10000 ATR 를 섞을 수 있습니다.</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 VIBOOK</source>
-        <translation>8개의 개별 마스터노드를 이용하여 최대 10000 VIBOOK 를 섞을 수 있습니다.</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 ATR</source>
+        <translation>8개의 개별 마스터노드를 이용하여 최대 10000 ATR 를 섞을 수 있습니다.</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>16개의 개별 마스터노드를 사용</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 VIBOOK to anonymize 10000 VIBOOK</source>
-        <translation>이 옵션은 가장 빠르게 전송되며 10000 VIBOOK 익명화에 약 ~0.025 VIBOOK의 비용이 들어갑니다.</translation>
+        <source>This option is the quickest and will cost about ~0.025 ATR to anonymize 10000 ATR</source>
+        <translation>이 옵션은 가장 빠르게 전송되며 10000 ATR 익명화에 약 ~0.025 ATR의 비용이 들어갑니다.</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 VIBOOK to anonymize 10000 VIBOOK</source>
-        <translation>이 옵션은 중간 정도의 속도로 전송되며 10000 VIBOOK 익명화에 약 0.05 VIBOOK의 비용이 들어갑니다.</translation>
+        <source>This option is moderately fast and will cost about 0.05 ATR to anonymize 10000 ATR</source>
+        <translation>이 옵션은 중간 정도의 속도로 전송되며 10000 ATR 익명화에 약 0.05 ATR의 비용이 들어갑니다.</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>이것은 가장 느리고 안전한 옵션입니다. 최고 익명성을 사용하면 비용이 발생합니다.</translation>
     </message>
     <message>
-        <source>0.1 VIBOOK per 10000 VIBOOK you anonymize.</source>
-        <translation>10000 VIBOOK 익명화에 0.1 VIBOOK 가 듭니다.</translation>
+        <source>0.1 ATR per 10000 ATR you anonymize.</source>
+        <translation>10000 ATR 익명화에 0.1 ATR 가 듭니다.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1708,28 +1668,12 @@ Please check the address and try again.</source>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
 https://www.transifex.com/vibook-project/vibook-project-translations</source>
-        <translation>지원 언어가 없거나 번역이 불완전한가요? 번역을 도와주세요 :
+        <translation>지원 언어가 없거나 번역이 불완전한가요? 번역 기여 도움말:
 https://www.transifex.com/vibook-project/vibook-project-translations</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>&amp;UPnp를 사용하여 포트 매핑</translation>
-    </message>
-    <message>
-        <source>Percentage of incoming VIBOOK which get automatically converted to zBOOK via Zerocoin Protocol (min: 10%)</source>
-        <translation>VIBOOK수신시 자동변환 zBOOK 퍼센트 (최소값:10%)</translation>
-    </message>
-    <message>
-        <source>Percentage of autominted zBOOK</source>
-        <translation>자동 변환되는 zBOOK 퍼센트</translation>
-    </message>
-    <message>
-        <source>Wait with automatic conversion to Zerocoin until enough VIBOOK for this denomination is available</source>
-        <translation>이 디노미네이션의 VIBOOK가 충분해질 때까지 Zerocoin으로 자동전환은 보류됩니다.</translation>
-    </message>
-    <message>
-        <source>Preferred Automint zBOOK Denomination</source>
-        <translation>선호하는 자동생성 zBOOK 디노미네이션 </translation>
     </message>
     <message>
         <source>Connect to the ViBOOK network through a SOCKS5 proxy.</source>
@@ -1824,10 +1768,6 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>&amp;취소</translation>
     </message>
     <message>
-        <source>I don't care</source>
-        <translation>없음</translation>
-    </message>
-    <message>
         <source>default</source>
         <translation>기본값</translation>
     </message>
@@ -1861,10 +1801,6 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
     <message>
         <source>Form</source>
         <translation>Form</translation>
-    </message>
-    <message>
-        <source>VIBOOK Balances</source>
-        <translation>VIBOOK 잔액</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1925,26 +1861,6 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
     <message>
         <source>Spendable:</source>
         <translation>출금 가능 액수:</translation>
-    </message>
-    <message>
-        <source>Combined Balances (including immature coins)</source>
-        <translation>전체 잔액 (대기중 코인 포함)</translation>
-    </message>
-    <message>
-        <source>VIBOOK:</source>
-        <translation>VIBOOK:</translation>
-    </message>
-    <message>
-        <source>zBOOK:</source>
-        <translation>zBOOK:</translation>
-    </message>
-    <message>
-        <source>0 %</source>
-        <translation>0 %</translation>
-    </message>
-    <message>
-        <source>Zerocoin Balance</source>
-        <translation>제로코인 잔액</translation>
     </message>
     <message>
         <source>Recent transactions</source>
@@ -2064,56 +1980,16 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
 <context>
     <name>PrivacyDialog</name>
     <message>
-        <source>VIBOOK which were anonymized via Zerocin Protocol</source>
-        <translation>제로코인 프로토콜을 통해 익명화된 VIBOOK</translation>
-    </message>
-    <message>
-        <source>Zerocoin VIBOOK (zBOOK)</source>
-        <translation>제로코인 VIBOOK (zBOOK)</translation>
-    </message>
-    <message>
-        <source>Zerocoin Actions:</source>
-        <translation>제로코인 관리:</translation>
-    </message>
-    <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the ViBOOK network after a connection is established, but this process has not completed yet.</source>
         <translation>표시된 정보가 오래되었을 수 있습니다. 연결이 완료되면 지갑이 ViBOOK 네트워크와 자동으로 동기화될 예정이지만, 아직 해당 프로세스가 완료되지 않았습니다.</translation>
-    </message>
-    <message>
-        <source>Enter an amount of Phr to convert to zPhr</source>
-        <translation>zBOOK로 변환할 VIBOOK 수량을 입력하세요.</translation>
-    </message>
-    <message>
-        <source>Mint Zerocoin</source>
-        <translation>제로코인 생성</translation>
     </message>
     <message>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <source>zBOOK</source>
-        <translation>zBOOK</translation>
-    </message>
-    <message>
-        <source>Available for Minting:</source>
-        <translation>생성 가능한 수량 :</translation>
-    </message>
-    <message>
-        <source>0.000 000 00 VIBOOK</source>
-        <translation>0.000 000 00 VIBOOK</translation>
-    </message>
-    <message>
-        <source>Reset Zerocoin Wallet DB. Deletes transactions that did not make it into the blockchain.</source>
-        <translation>제로코인 지갑 DB 재설정. 블록 체인에 포함시키지 않은 트랜잭션을 삭제합니다.</translation>
-    </message>
-    <message>
         <source>Reset</source>
         <translation>초기화</translation>
-    </message>
-    <message>
-        <source>Coin Control...</source>
-        <translation>코인 컨트롤...</translation>
     </message>
     <message>
         <source>Quantity:</source>
@@ -2124,64 +2000,8 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>금액:</translation>
     </message>
     <message>
-        <source>Rescan the complete blockchain for  Zerocoin mints and their meta-data.</source>
-        <translation>제로코인 생성과 메타데이타를 위해 블록체인을 다시 스캔합니다.</translation>
-    </message>
-    <message>
-        <source>ReScan</source>
-        <translation>다시 스캔</translation>
-    </message>
-    <message>
-        <source>Status and/or Mesages from the last Mint Action.</source>
-        <translation>마지막 발행 이후 상태나 메세지</translation>
-    </message>
-    <message>
-        <source>zPhr Control</source>
-        <translation>zBOOK 설정</translation>
-    </message>
-    <message>
-        <source>zPhr Selected:</source>
-        <translation>선택한 zBOOK : </translation>
-    </message>
-    <message>
-        <source>Quantity Selected:</source>
-        <translation>선택된 수량 :</translation>
-    </message>
-    <message>
-        <source>Spend Zerocoin. Without 'Pay To:' address creates payments to yourself.</source>
-        <translation>제로코인 전송 'Pay To :' 주소가 없으면 자신에게 지불합니다.</translation>
-    </message>
-    <message>
-        <source>Spend Zerocoin</source>
-        <translation>제로코인 보내기</translation>
-    </message>
-    <message>
-        <source>Available Balance:</source>
-        <translation>가능한 잔액:</translation>
-    </message>
-    <message>
-        <source>0 zBOOK</source>
-        <translation>0 zBOOK</translation>
-    </message>
-    <message>
-        <source>Security Level for Zerocoin Transactions. More is better, but needs more time and resources.</source>
-        <translation>제로코인 전송 시큐리티 레벨.  높을수록 좋지만, 시간과 많은 자원이 필요합니다.</translation>
-    </message>
-    <message>
-        <source>Security Level:</source>
-        <translation>시큐리티 레벨:</translation>
-    </message>
-    <message>
-        <source>Security Level 1 - 100 (default: 42)</source>
-        <translation>시큐리티 레벨 1 - 100 (기본값: 42)</translation>
-    </message>
-    <message>
         <source>Pay &amp;To:</source>
         <translation>지불 &amp;대상:</translation>
-    </message>
-    <message>
-        <source>The ViBOOK address to send the payment to. Creates local payment to yourself when empty.</source>
-        <translation>VIBOOK를 전송할 ViBOOK 주소입니다. 비어있을 때 자신에게 지불할 주소를 생성합니다.</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2212,106 +2032,6 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>금&amp;액:</translation>
     </message>
     <message>
-        <source>Convert Change to Zerocoin (might cost additional fees)</source>
-        <translation>잔돈을 제로코인으로 변환 (추가 요금이 부과될 수 있음)</translation>
-    </message>
-    <message>
-        <source>If checked, the wallet tries to minimize the returning change instead of minimizing the number of spent denominations.</source>
-        <translation>이 옵션을 선택하면, 사용한 디노미네이션의 수를 최소화하는 대신 남는 잔돈을 최소화합니다.</translation>
-    </message>
-    <message>
-        <source>Minimize Change</source>
-        <translation>잔돈 최소화하기</translation>
-    </message>
-    <message>
-        <source>Information about the available Zerocoin funds.</source>
-        <translation>사용가능한 제로코인 정보</translation>
-    </message>
-    <message>
-        <source>Zerocoin Stats:</source>
-        <translation>제로코인 상태 :</translation>
-    </message>
-    <message>
-        <source>Available Funds</source>
-        <translation>사용가는한 펀드</translation>
-    </message>
-    <message>
-        <source>Available Zerocoin  Balance:</source>
-        <translation>사용가능한 제로코인 잔액:</translation>
-    </message>
-    <message>
-        <source>Denominations with value 1:</source>
-        <translation>디노미네이션 값 1:</translation>
-    </message>
-    <message>
-        <source>Denom. with value 1:</source>
-        <translation>Denom. 값 1:</translation>
-    </message>
-    <message>
-        <source>0 x</source>
-        <translation>0 x</translation>
-    </message>
-    <message>
-        <source>Denominations with value 5:</source>
-        <translation>디노미네이션 값 5:</translation>
-    </message>
-    <message>
-        <source>Denom. with value 5:</source>
-        <translation>Denom. 값 5:</translation>
-    </message>
-    <message>
-        <source>Denominations with value 10:</source>
-        <translation>디노미네이션  값 10:</translation>
-    </message>
-    <message>
-        <source>Denom. with value 10:</source>
-        <translation>Denom. 값 10:</translation>
-    </message>
-    <message>
-        <source>Denominations with value 50:</source>
-        <translation>디노미네이션 값 50:</translation>
-    </message>
-    <message>
-        <source>Denom. with value 50:</source>
-        <translation>Denom. 값 50:</translation>
-    </message>
-    <message>
-        <source>Denominations with value 100:</source>
-        <translation>디노미네이션 값 100:</translation>
-    </message>
-    <message>
-        <source>Denom. with value 100:</source>
-        <translation>Denom. 값 100:</translation>
-    </message>
-    <message>
-        <source>Denominations with value 500:</source>
-        <translation>디노미네이션 값 500:</translation>
-    </message>
-    <message>
-        <source>Denom. with value 500:</source>
-        <translation>Denom. 값 500:</translation>
-    </message>
-    <message>
-        <source>Denominations with value 1000:</source>
-        <translation>디노미네이션 값 1000:</translation>
-    </message>
-    <message>
-        <source>Denom. with value 1000:</source>
-        <translation>Denom. 값 1000:</translation>
-    </message>
-    <message>
-        <source>Denominations with value 5000:</source>
-        <translation>디노미네이션 값 5000:</translation>
-    </message>
-    <message>
-        <source>Denom. with value 5000:</source>
-        <translation>Denom. 값 5000:</translation>
-    </message>
-    <message>
-        <source>Note: This hidden objects are used for communication between the 'Coin Control' dialog and its parent objects. We don't want to change/reimplement the existing Coin Control, so this objects must be here, even when we don't use them. No, we don't like this approach, either.</source>
-        <translation>Note: This hidden objects are used for communication between the 'Coin Control' dialog and its parent objects. We don't want to change/reimplement the existing Coin Control, so this objects must be here, even when we don't use them. No, we don't like this approach, either.</translation>
-    </message>
-    <message>
         <source>Priority:</source>
         <translation>우선 순위:</translation>
     </message>
@@ -2336,10 +2056,6 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>자금이 충분하지 않습니다!</translation>
     </message>
     <message>
-        <source>Coins automatically selected</source>
-        <translation>코인 자동으로 선택됨</translation>
-    </message>
-    <message>
         <source>medium</source>
         <translation>중간</translation>
     </message>
@@ -2356,20 +2072,12 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>커스텀 주소 변경</translation>
     </message>
     <message>
-        <source>Amount After Fee:</source>
-        <translation>수수료 차감 금액:</translation>
-    </message>
-    <message>
         <source>Change:</source>
         <translation>변경:</translation>
     </message>
     <message>
         <source>out of sync</source>
         <translation>동기화되지 않음</translation>
-    </message>
-    <message>
-        <source>Mint Status: Okay</source>
-        <translation>생성 상태 : Okay</translation>
     </message>
     <message>
         <source>Copy quantity</source>
@@ -2380,144 +2088,10 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>금액 복사</translation>
     </message>
     <message>
-        <source>Zerocoin functionality is not enabled on the ViBOOK network yet.</source>
-        <translation>제로 코인 기능 상태가 ViBOOK 네트워크 상에서 이루어지지 않습니다.</translation>
-    </message>
-    <message>
-        <source>Error: Your wallet is locked. Please enter the wallet passphrase first.</source>
-        <translation>Error : 지갑이 잠겨있습니다. 먼저 지갑을 열어주세요.</translation>
-    </message>
-    <message>
-        <source>Message: Enter an amount &gt; 0.</source>
-        <translation>Message: 0 이상의 수량을 입력하세요.</translation>
-    </message>
-    <message>
-        <source>Minting </source>
-        <translation>생성중입니다.</translation>
-    </message>
-    <message>
-        <source>Successfully minted </source>
-        <translation>성공적으로 발행됨</translation>
-    </message>
-    <message>
-        <source> zBOOK in </source>
-        <translation> zBOOK in </translation>
-    </message>
-    <message>
-        <source> sec. Used denominations:
-</source>
-        <translation> 초. 사용된 디노미네이션:
-</translation>
-    </message>
-    <message>
-        <source>Starting ResetMintZerocoin: rescanning complete blockchain, this will need up to 30 minutes depending on your hardware.
-Please be patient...</source>
-        <translation>제로코인 생성 초기화 진행중... : 전체 블록체인을 다시 검색합니다. 하드웨어에 따라 최대 30분이 걸릴수 있습니다.
-기다려주세요...</translation>
-    </message>
-    <message>
-        <source>Duration: </source>
-        <translation>경과시간:</translation>
-    </message>
-    <message>
-        <source> sec.
-</source>
-        <translation>초.
-</translation>
-    </message>
-    <message>
-        <source>Starting ResetSpentZerocoin: </source>
-        <translation>전송된 제로코인 리셋 시작중...</translation>
-    </message>
-    <message>
-        <source>No 'Pay To' address provided, creating local payment</source>
-        <translation>주소를 입력하지 않아, 신규 주소를 생성합니다.</translation>
-    </message>
-    <message>
-        <source>Invalid ViBOOK Address</source>
-        <translation>잘못된 ViBOOK 주소</translation>
-    </message>
-    <message>
-        <source>Invalid Send Amount</source>
-        <translation>잘못된 전송 수량</translation>
-    </message>
-    <message>
-        <source>Confirm additional Fees</source>
-        <translation>추가 수수료 확인</translation>
-    </message>
-    <message>
-        <source>Are you sure you want to send?&lt;br /&gt;&lt;br /&gt;</source>
-        <translation>정말로 보내시겠습니까?&lt;br /&gt;&lt;br /&gt;</translation>
-    </message>
-    <message>
-        <source> to address </source>
-        <translation>주소로</translation>
-    </message>
-    <message>
-        <source> to a newly generated (unused and therefor anonymous) local address &lt;br /&gt;</source>
-        <translation>새로 생성된 개인 지갑 주소(미사용된 익명의) &lt;br /&gt; 로</translation>
-    </message>
-    <message>
-        <source>with Security Level </source>
-        <translation>시큐리티 레벨</translation>
-    </message>
-    <message>
         <source>Confirm send coins</source>
         <translation>코인 전송 확인</translation>
     </message>
-    <message>
-        <source>Spending Zerocoin.
-Computationally expensive, might need several minutes depending on the selected Security Level and your hardware.
-Please be patient...</source>
-        <translation>제로코인 전송중입니다.
-시큐리티 레벨과 여러분의 하드웨어에 따라 수 분이 걸립니다.
-조금만 기다려주세요...</translation>
-    </message>
-    <message>
-        <source>Spend Zerocoin failed with status = </source>
-        <translation>제로코인 송금 실패 상태 =</translation>
-    </message>
-    <message>
-        <source>zPhr Spend #: </source>
-        <translation>zPhr 송금 #: </translation>
-    </message>
-    <message>
-        <source>denomination: </source>
-        <translation>디노미네이션: </translation>
-    </message>
-    <message>
-        <source>serial: </source>
-        <translation>시리얼:</translation>
-    </message>
-    <message>
-        <source>Spend is 1 of : </source>
-        <translation>Spend is 1 of : </translation>
-    </message>
-    <message>
-        <source>value out: </source>
-        <translation>출력 값:</translation>
-    </message>
-    <message>
-        <source>address: </source>
-        <translation>주소:</translation>
-    </message>
-    <message>
-        <source>zPhr Mint</source>
-        <translation>zBOOK 생성</translation>
-    </message>
-    <message>
-        <source>Sending successful, return code: </source>
-        <translation>성공 완료, 리턴 코드 :</translation>
-    </message>
-    <message>
-        <source>txid: </source>
-        <translation>txid:</translation>
-    </message>
-    <message>
-        <source>fee: </source>
-        <translation>수수료:</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>QObject</name>
     <message>
@@ -3132,8 +2706,8 @@ Please be patient...</source>
         <translation>UTXO 크기:</translation>
     </message>
     <message>
-        <source>0 VIBOOK</source>
-        <translation>0 VIBOOK</translation>
+        <source>0 ATR</source>
+        <translation>0 ATR</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -3176,20 +2750,12 @@ Please be patient...</source>
         <translation>승인 시간:</translation>
     </message>
     <message>
-        <source>Open Coin Control...</source>
-        <translation>코인 설정 열기...</translation>
+        <source>If the custom fee is set to 1000 uATRs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uATRs in fee,&lt;br /&gt;while "at least" pays 1000 uATRs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>트랜잭션이 250바이트 인 경우 사용자 지정 수수료가 1000 uATRs로 설정되고,&lt;br /&gt;1000 uATRs 안에는 최소 "킬로바이트당" 250 uATRs 만 지불합니다. 1 킬로바이트보다 큰 트랜잭션의 경우 모두 킬로바이트 단위로 지불합니다.</translation>
     </message>
     <message>
-        <source>Coins automatically selected</source>
-        <translation>코인 자동으로 선택됨</translation>
-    </message>
-    <message>
-        <source>If the custom fee is set to 1000 uVIBOOKs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uVIBOOKs in fee,&lt;br /&gt;while "at least" pays 1000 uVIBOOKs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>트랜잭션이 250바이트 인 경우 사용자 지정 수수료가 1000 uVIBOOKs로 설정되고,&lt;br /&gt;1000 uVIBOOKs 안에는 최소 "킬로바이트당" 250 uVIBOOKs 만 지불합니다. 1 킬로바이트보다 큰 트랜잭션의 경우 모두 킬로바이트 단위로 지불합니다.</translation>
-    </message>
-    <message>
-        <source>If the custom fee is set to 1000 uVIBOOKs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uVIBOOKs in fee,&lt;br /&gt;while "total at least" pays 1000 uVIBOOKs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>트랜잭션이 250바이트 인 경우 사용자 지정 수수료가 1000 uVIBOOKs로 설정되고,&lt;br /&gt;1000 uVIBOOKs 안에는 전체에서 최소 "킬로바이트당" 250 uVIBOOKs 만 지불합니다. 1 킬로바이트보다 큰 트랜잭션의 경우 모두 킬로바이트 단위로 지불합니다.</translation>
+        <source>If the custom fee is set to 1000 uATRs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uATRs in fee,&lt;br /&gt;while "total at least" pays 1000 uATRs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>트랜잭션이 250바이트 인 경우 사용자 지정 수수료가 1000 uATRs로 설정되고,&lt;br /&gt;1000 uATRs 안에는 전체에서 최소 "킬로바이트당" 250 uATRs 만 지불합니다. 1 킬로바이트보다 큰 트랜잭션의 경우 모두 킬로바이트 단위로 지불합니다.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for ViBOOK transactions than the network can process.</source>
@@ -3238,10 +2804,6 @@ Please be patient...</source>
     <message>
         <source>Add &amp;Recipient</source>
         <translation>&amp;받는 사람 추가</translation>
-    </message>
-    <message>
-        <source>Anonymized VIBOOK</source>
-        <translation>익명화 VIBOOK</translation>
     </message>
     <message>
         <source>SwiftTX</source>
@@ -3335,10 +2897,6 @@ Please be patient...</source>
         <source>A fee %1 times higher than %2 per kB is considered an insanely high fee.</source>
         <translation>KB당 %1보다 %2배 많은 수수료는 너무 높은 수수료입니다.</translation>
     </message>
-    <message numerus="yes">
-        <source>Estimated to begin confirmation within %n block(s).</source>
-        <translation><numerusform>%n 블록이내에서 컨펌이 시작될것 같습니다.</numerusform></translation>
-    </message>
     <message>
         <source>The recipient address is not valid, please recheck.</source>
         <translation>수신자 주소가 유효하지 않습니다. 다시 확인해주세요.</translation>
@@ -3377,7 +2935,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>Error: The wallet was unlocked only to anonymize coins.</source>
-        <translation>오류: 현재 지갑이 익명 처리를 위해 잠금해제 되어 있습니다. 익명화 및 스테이킹 전용을 해제하시고 다시 시도하세요.</translation>
+        <translation>오류: 지갑이 코인 익명 처리를 위해 잠금해제 되었습니다.</translation>
     </message>
     <message>
         <source>Error: The wallet was unlocked only to anonymize coins. Unlock canceled.</source>
@@ -3657,10 +3215,6 @@ Please be patient...</source>
 </context>
 <context>
     <name>TransactionDesc</name>
-    <message numerus="yes">
-        <source>Open for %n more block(s)</source>
-        <translation><numerusform>%n 이상의 블록 열기</numerusform></translation>
-    </message>
     <message>
         <source>Open until %1</source>
         <translation>%1까지 열기</translation>
@@ -3722,10 +3276,6 @@ Please be patient...</source>
         <source>, has not been successfully broadcast yet</source>
         <translation>, 아직 성공적으로 브로드캐스트되지 않았습니다</translation>
     </message>
-    <message numerus="yes">
-        <source>, broadcast through %n node(s)</source>
-        <translation><numerusform>, %n 개 노드를 통해 브로드캐스트됩니다.</numerusform></translation>
-    </message>
     <message>
         <source>Date</source>
         <translation>날짜</translation>
@@ -3765,10 +3315,6 @@ Please be patient...</source>
     <message>
         <source>Credit</source>
         <translation>크레딧</translation>
-    </message>
-    <message numerus="yes">
-        <source>matures in %n more block(s)</source>
-        <translation><numerusform>%n 개 이상의 블록에서 생성됩니다.</numerusform></translation>
     </message>
     <message>
         <source>not accepted</source>
@@ -3868,10 +3414,6 @@ Please be patient...</source>
         <source>Address</source>
         <translation>주소</translation>
     </message>
-    <message numerus="yes">
-        <source>Open for %n more block(s)</source>
-        <translation><numerusform>%n 이상의 블록 열기</numerusform></translation>
-    </message>
     <message>
         <source>Open until %1</source>
         <translation>%1까지 열기</translation>
@@ -3914,7 +3456,7 @@ Please be patient...</source>
     </message>
     <message>
         <source>Received from</source>
-        <translation>수신됨</translation>
+        <translation>발신원</translation>
     </message>
     <message>
         <source>Received via Obfuscation</source>
@@ -3961,32 +3503,8 @@ Please be patient...</source>
         <translation>난독화</translation>
     </message>
     <message>
-        <source>Converted Phr to zPhr</source>
-        <translation>zBOOK로 변환된 VIBOOK</translation>
-    </message>
-    <message>
-        <source>Spent zPhr</source>
-        <translation>전송된 zBOOK</translation>
-    </message>
-    <message>
-        <source>Received Phr from zPhr</source>
-        <translation>zBOOK로 전송받은 VIBOOK</translation>
-    </message>
-    <message>
-        <source>Minted Change as zPhr from zPhr Spend</source>
-        <translation>zBOOK 전송후 남은 잔돈 zBOOK 생성됨</translation>
-    </message>
-    <message>
-        <source>Converted zPhr to Phr</source>
-        <translation>zPhr에서 Phr로 변환됨</translation>
-    </message>
-    <message>
         <source>watch-only</source>
         <translation>읽기 전용</translation>
-    </message>
-    <message>
-        <source>zPhr Accumulator</source>
-        <translation>zPhr 누산기</translation>
     </message>
     <message>
         <source>(n/a)</source>
@@ -4094,26 +3612,6 @@ Please be patient...</source>
     <message>
         <source>Masternode Reward</source>
         <translation>마스터노드 보상 </translation>
-    </message>
-    <message>
-        <source>Received Phr from zPhr</source>
-        <translation>zBOOK로 전송받은 VIBOOK</translation>
-    </message>
-    <message>
-        <source>Zerocoin Mint</source>
-        <translation>제로코인 생성</translation>
-    </message>
-    <message>
-        <source>Zerocoin Spend</source>
-        <translation>제로코인 전송</translation>
-    </message>
-    <message>
-        <source>Zerocoin Spend, Change in zPhr</source>
-        <translation>제로코인 전송, 잔돈은 zBOOK</translation>
-    </message>
-    <message>
-        <source>Zerocoin Spend to Self</source>
-        <translation>자신에게 제로코인 전송</translation>
     </message>
     <message>
         <source>Other</source>
@@ -4233,8 +3731,8 @@ Please be patient...</source>
         <translation>코인 전송 </translation>
     </message>
     <message>
-        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 VIBOOK.</source>
-        <translation>SwiftTX는 아직 높은 값을 전송하는 것을 지원하지 않습니다. 트랜잭션은 현재 %1 VIBOOK로 제한됩니다.</translation>
+        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 ATR.</source>
+        <translation>SwiftTX는 아직 높은 값을 전송하는 것을 지원하지 않습니다. 트랜잭션은 현재 %1 ATR로 제한됩니다.</translation>
     </message>
 </context>
 <context>
@@ -4277,32 +3775,12 @@ Please be patient...</source>
     </message>
 </context>
 <context>
-    <name>ZPhrControlDialog</name>
-    <message>
-        <source>Select zPhr to Spend</source>
-        <translation>전송할 zBOOK 선택</translation>
-    </message>
-    <message>
-        <source>Quantity</source>
-        <translation>수량</translation>
-    </message>
+    <name>ZATRControlDialog</name>
     <message>
         <source>0</source>
         <translation>0</translation>
     </message>
-    <message>
-        <source>zPhr</source>
-        <translation>zPhr</translation>
-    </message>
-    <message>
-        <source>Select/Deselect All</source>
-        <translation>전체 선택 / 해제</translation>
-    </message>
-    <message>
-        <source>Is Spendable</source>
-        <translation>전송가능합니다.</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>vibook-core</name>
     <message>
@@ -4328,10 +3806,6 @@ Please be patient...</source>
     <message>
         <source>Bind to given address to listen for JSON-RPC connections. Use [host]:port notation for IPv6. This option can be specified multiple times (default: bind to all interfaces)</source>
         <translation>JSON-RPC연결 수신을 위해 주어진 주소를 지정합니다. [host]: IPv6 포트 표기법 사용. 이 옵션은 여러번 지정할 수 있습니다. (기본값 : 모든 인터페이스에 지정)</translation>
-    </message>
-    <message>
-        <source>Calculated accumulator checkpoint is not what is recorded by block index</source>
-        <translation>계산된 누산기 체크포인트는 블록 인덱스에 의해 기록되는 것이 아닙니다.</translation>
     </message>
     <message>
         <source>Cannot obtain a lock on data directory %s. ViBOOK Core is probably already running.</source>
@@ -4394,12 +3868,12 @@ Please be patient...</source>
         <translation>최고 블록이 변경될 경우 명령을 실행하십시오 (명령 내 %s 는 블록 해시로 대체 되었습니다)</translation>
     </message>
     <message>
-        <source>Fees (in VIBOOK/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>이것보다 작은 수수료 (VIBOOK/Kb)는 중계 수수료가 없는 것으로 간주됩니다 (기본값: %s)</translation>
+        <source>Fees (in ATR/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>이것보다 작은 수수료 (ATR/Kb)는 중계 수수료가 없는 것으로 간주됩니다 (기본값: %s)</translation>
     </message>
     <message>
-        <source>Fees (in VIBOOK/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>이것보다 작은 수수료 (VIBOOK/Kb)는 트랜잭션 생성 수수료가 없는 것으로 간주됩니다 (기본값: %s)</translation>
+        <source>Fees (in ATR/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>이것보다 작은 수수료 (ATR/Kb)는 트랜잭션 생성 수수료가 없는 것으로 간주됩니다 (기본값: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -4408,6 +3882,10 @@ Please be patient...</source>
     <message>
         <source>Found unconfirmed denominated outputs, will wait till they confirm to continue.</source>
         <translation>미확인 표시된 출력들을 찾고 계속하기 위한 확인을 받기 전까지 기다립니다.</translation>
+    </message>
+    <message>
+        <source>How thorough the block verification of -checkblocks is (0-4, default: %u)</source>
+        <translation>-checkblocks의 블록 검증이 얼마나 철저한 정도 (0-4, 기본값: %u)</translation>
     </message>
     <message>
         <source>If paytxfee is not set, include enough fee so transactions begin confirmation on average within n blocks (default: %u)</source>
@@ -4526,12 +4004,12 @@ rpcpassword=%s
         <translation>이 트랜잭션를 위해 난독화 표기된 충분한 금액을 찾을 수 없습니다.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 VIBOOK.</source>
-        <translation>이 트랜잭션를 위해 난독화 표기가 안된 충분한 금액을 찾을 수 없습니다. 10000 VIBOOK과 일치하지 않음.</translation>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 ATR.</source>
+        <translation>이 트랜잭션를 위해 난독화 표기가 안된 충분한 금액을 찾을 수 없습니다. 10000 ATR과 일치하지 않음.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 VIBOOK.</source>
-        <translation>트랜잭션에 대한 충분한 금액을 찾을 수 없습니다. 10000 VIBOOK와 같지 않음</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 ATR.</source>
+        <translation>트랜잭션에 대한 충분한 금액을 찾을 수 없습니다. 10000 ATR와 같지 않음</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -4578,8 +4056,8 @@ rpcpassword=%s
         <translation>환경설정에서 masternodeprivkey를 지정해야 합니다. 도움말을 참조하십시오.</translation>
     </message>
     <message>
-        <source>(22262 could be used only on mainnet)</source>
-        <translation>(22262 은 메인넷에서만 사용될 수 있습니다)</translation>
+        <source>(46200 could be used only on mainnet)</source>
+        <translation>(46200 은 메인넷에서만 사용될 수 있습니다)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -4590,8 +4068,8 @@ rpcpassword=%s
         <translation>(기본값: 1)</translation>
     </message>
     <message>
-        <source>(must be 22262 for mainnet)</source>
-        <translation>(메인넷 일경우 22262)</translation>
+        <source>(must be 46200 for mainnet)</source>
+        <translation>(메인넷 일경우 46200)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>
@@ -4630,16 +4108,8 @@ rpcpassword=%s
         <translation>손상된 wallet.dat으로 부터 개인 키 복구를 시도합니다.</translation>
     </message>
     <message>
-        <source>Automatically create Tor hidden service (default: %d)</source>
-        <translation>자동 Tor 히든 서버스 생성 (기본값: %d)</translation>
-    </message>
-    <message>
         <source>Block creation options:</source>
         <translation>블록 생성 옵션:</translation>
-    </message>
-    <message>
-        <source>Calculating missing accumulators...</source>
-        <translation>누락된 누산기 계산중...</translation>
     </message>
     <message>
         <source>Can't denominate: no compatible inputs left.</source>
@@ -4702,8 +4172,12 @@ rpcpassword=%s
         <translation>Copyright (C) 2014-%i The Dash Core 개발자들</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The ViBOOK Core Developers</source>
-        <translation>Copyright (C) 2015-%i The ViBOOK Core 개발자</translation>
+        <source>Copyright (C) 2015-%i The PIVX Core Developers</source>
+        <translation>Copyright (C) 2015-%i The PIVX Core 개발자</translation>
+    </message>
+    <message>
+        <source>Copyright (C) 2018-%i The ViBOOK Core Developers</source>
+        <translation>Copyright (C) 2018-%i The ViBOOK Core Developers</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>
@@ -4720,10 +4194,6 @@ rpcpassword=%s
     <message>
         <source>Debugging/Testing options:</source>
         <translation>디버깅/테스팅 옵션:</translation>
-    </message>
-    <message>
-        <source>Disable OS notifications for incoming transactions (default: %u)</source>
-        <translation>거래시 수신 알림창 해제  (기본값: %u)</translation>
     </message>
     <message>
         <source>Disable safemode, override a real safe mode event (default: %u)</source>
@@ -4744,10 +4214,6 @@ rpcpassword=%s
     <message>
         <source>Done loading</source>
         <translation>로딩 완료</translation>
-    </message>
-    <message>
-        <source>Enable automatic Zerocoin minting (0-1, default: %u)</source>
-        <translation>자동 제로코인 생성 (0-1, 기본값: %u)</translation>
     </message>
     <message>
         <source>Enable the client to act as a masternode (0-1, default: %u)</source>
@@ -4834,8 +4300,8 @@ rpcpassword=%s
         <translation>블록을 받아오는데 실패했습니다.</translation>
     </message>
     <message>
-        <source>Fee (in VIBOOK/kB) to add to transactions you send (default: %s)</source>
-        <translation>당신이 보내는 트랜잭션에 추가 할 수수료 (VIBOOK/kB) (기본값: %s)</translation>
+        <source>Fee (in ATR/kB) to add to transactions you send (default: %s)</source>
+        <translation>당신이 보내는 트랜잭션에 추가 할 수수료 (ATR/kB) (기본값: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -4902,20 +4368,16 @@ rpcpassword=%s
         <translation>입력이 올바르지 않습니다.</translation>
     </message>
     <message>
-        <source>Insufficient funds</source>
-        <translation>잔액이 충분하지 않음</translation>
-    </message>
-    <message>
         <source>Insufficient funds.</source>
         <translation>충분하지 않은 금액.</translation>
     </message>
     <message>
-        <source>Invalid -onion address or hostname: '%s'</source>
-        <translation>잘못된 -onion 주소거나 호스트네임 : '%s'</translation>
+        <source>Invalid -onion address: '%s'</source>
+        <translation>유효하지 않은 -onion 주소: '%s'</translation>
     </message>
     <message>
-        <source>Invalid -proxy address or hostname: '%s'</source>
-        <translation>잘못된 -proxy 주소거나 호스트네입 : '%s'</translation>
+        <source>Invalid -proxy address: '%s'</source>
+        <translation>유효하지 않은 -proxy 주소: '%s'</translation>
     </message>
     <message>
         <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s'</source>
@@ -4942,10 +4404,6 @@ rpcpassword=%s
         <translation>-reservebalance=&lt;amount&gt;에 대한 금액이 유효하지 않은 값</translation>
     </message>
     <message>
-        <source>Invalid amount</source>
-        <translation>잘못된 수량</translation>
-    </message>
-    <message>
         <source>Invalid masternodeprivkey. Please see documenation.</source>
         <translation>마스터노드 개인 키가 잘못되었습니다. 설명서를 참조하십시오.</translation>
     </message>
@@ -4968,38 +4426,6 @@ rpcpassword=%s
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for staking or merchant applications!</source>
         <translation>이것은 사전 릴리스 테스트 빌드입니다 - 사용상 책임은 귀하에게 있습니다. - staking이나 상업적인 용도로는 절대 사용하지 마십시오!</translation>
-    </message>
-    <message>
-        <source> mints deleted
-</source>
-        <translation>생성 삭제
-</translation>
-    </message>
-    <message>
-        <source> mints updated, </source>
-        <translation>생성 업데이드</translation>
-    </message>
-    <message>
-        <source> unconfirmed transactions removed
-</source>
-        <translation>미확인된 거래 삭제됨
-</translation>
-    </message>
-    <message>
-        <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>에러 : 거래가 거부되었습니다. 예를 들어 다른 사본 wallet.dat에서 코인을 사용했다면 2중 사용으로 인식될수 있습니다. 혹은, 일부가 이미 소비 된 경우에 이런 일이 발생할 수 있습니다.</translation>
-    </message>
-    <message>
-        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
-        <translation>에러 :이 거래에는 전송량, 복잡성 또는 최근에 받은 자금의 사용등으로 인해 적어도 %s의 거래 수수료가 필요합니다!</translation>
-    </message>
-    <message>
-        <source>Error: Unsupported argument -checklevel found. Checklevel must be level 4.</source>
-        <translation>에러 : 지원하지않는 argument -checklevel 발견된.  Checklevel는 레벨 4이어야 합니다.</translation>
-    </message>
-    <message>
-        <source>Preferred Denomination for automatically minted Zerocoin  (1/5/10/50/100/500/1000/5000), 0 for no preference. default: %u)</source>
-        <translation>자동생성 제로코인 선호 디노미네이션 (1/5/10/50/100/500/1000/5000) 0사용안됨, 기본값 : %u)</translation>
     </message>
     <message>
         <source>&lt;category&gt; can be:</source>
@@ -5058,10 +4484,6 @@ rpcpassword=%s
         <translation>최근에 마지막으로 성공한 난독화 작업이 있습니다.</translation>
     </message>
     <message>
-        <source>Less than 3 mints added, unable to create spend</source>
-        <translation>3 미만 추가, 송금 불가능함</translation>
-    </message>
-    <message>
         <source>Limit size of signature cache to &lt;n&gt; entries (default: %u)</source>
         <translation>시그니처 캐시의 크기 제한을 &lt;n&gt; 항목으로 합니다 (기본값: %u)</translation>
     </message>
@@ -5096,10 +4518,6 @@ rpcpassword=%s
     <message>
         <source>Loading masternode payment cache...</source>
         <translation>마스터노드 결제 캐시를 불러오는 중...</translation>
-    </message>
-    <message>
-        <source>Loading sporks...</source>
-        <translation>sporks 로딩중...</translation>
     </message>
     <message>
         <source>Loading wallet... (%3.2f %%)</source>
@@ -5222,10 +4640,6 @@ rpcpassword=%s
         <translation>JSON-RPC 연결 비밀번호</translation>
     </message>
     <message>
-        <source>Percentage of automatically minted Zerocoin  (10-100, default: %u)</source>
-        <translation>자동 생성 제로코인 퍼센트 (10-100, 기본값: %u)</translation>
-    </message>
-    <message>
         <source>Prepend debug output with timestamp (default: %u)</source>
         <translation>디버그 출력 앞에 타임스탬프를 추가합니다. (기본값: %u)</translation>
     </message>
@@ -5276,14 +4690,6 @@ rpcpassword=%s
     <message>
         <source>Rescanning...</source>
         <translation>다시 스캔하는 중...</translation>
-    </message>
-    <message>
-        <source>ResetMintZerocoin finished: </source>
-        <translation>생성된 제로코인 초기화 완료:</translation>
-    </message>
-    <message>
-        <source>ResetSpentZerocoin finished: </source>
-        <translation>사용된 제로코인 초기화 완료:</translation>
     </message>
     <message>
         <source>Run a thread to flush wallet periodically (default: %u)</source>
@@ -5470,14 +4876,6 @@ rpcpassword=%s
         <translation>제대로 동작하지 않는 피어와 연결을 끊을 임계값 (기본값: %u)</translation>
     </message>
     <message>
-        <source>Tor control port password (default: empty)</source>
-        <translation>Tor 컨트롤 포트 암호 (기본값: 공백)</translation>
-    </message>
-    <message>
-        <source>Tor control port to use if onion listening enabled (default: %s)</source>
-        <translation>onion 활성화되었을 경우 사용할 Tor 코트롤 포트 (기본값: %s)</translation>
-    </message>
-    <message>
         <source>Transaction amount too small</source>
         <translation>트랜잭션 금액이 너무 적습니다</translation>
     </message>
@@ -5620,14 +5018,6 @@ rpcpassword=%s
     <message>
         <source>ZeroMQ notification options:</source>
         <translation>ZeroMQ 알림 옵션:</translation>
-    </message>
-    <message>
-        <source>Zerocoin options:</source>
-        <translation>제로코인 옵션:</translation>
-    </message>
-    <message>
-        <source>failed to validate zerocoin</source>
-        <translation>제로코인 검증을 못했습니다.</translation>
     </message>
     <message>
         <source>on startup</source>

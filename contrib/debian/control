@@ -23,8 +23,8 @@ Build-Depends: debhelper,
  libprotobuf-dev, protobuf-compiler
 Standards-Version: 3.9.2
 Homepage: http://www.vibook.org
-Vcs-Git: git://github.com/vibookproject/ViBOOK.git
-Vcs-Browser: http://github.com/vibookproject/ViBOOK
+Vcs-Git: git://github.com/ViBOOK-Project/ViBOOK.git
+Vcs-Browser: http://github.com/ViBOOK-Project/ViBOOK
 
 Package: vibookd
 Architecture: any

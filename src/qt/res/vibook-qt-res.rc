@@ -19,14 +19,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "ViBOOK - CWF"
-            VALUE "FileDescription",    "ViBOOK (CoinWebFactory Release)"
+            VALUE "CompanyName",        "ViBOOK"
+            VALUE "FileDescription",    "ViBOOK Core (OSS GUI client for ViBOOK)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "vibook-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
-            VALUE "LegalTrademarks1",   "Distributed by CoinWebFactory under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
+            VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
             VALUE "OriginalFilename",   "vibook-qt.exe"
-            VALUE "ProductName",        "ViBOOK CWF"
+            VALUE "ProductName",        "ViBOOK Core"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

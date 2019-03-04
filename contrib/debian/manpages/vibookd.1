@@ -1,4 +1,4 @@
-.TH VIBOOKD "1" "February 2017" "vibookd 2.1.4.1"
+.TH BOOKD "1" "February 2017" "vibookd 2.1.4.1"
 .SH NAME
 ViBOOK \- peer-to-peer network based digital currency
 .SH SYNOPSIS
@@ -62,20 +62,6 @@ Allow JSON\-RPC connections from specified IP address
 .TP
 \fB\-rpcconnect=\fR<ip>
 Send commands to node running on <ip>
-.PP
-SSL options: (see the Bitcoin Wiki for SSL setup instructions)
-.TP
-\fB\-rpcssl\fR=\fI1\fR
-Use OpenSSL (https) for JSON\-RPC connections
-.TP
-\fB\-rpcsslcertificatchainfile=\fR<file.cert>
-Server certificate file (default: server.cert)
-.TP
-\fB\-rpcsslprivatekeyfile=\fR<file.pem>
-Server private key (default: server.pem)
-.TP
-\fB\-rpcsslciphers=\fR<ciphers>
-Acceptable ciphers (default: TLSv1+HIGH:\:!SSLv2:\:!aNULL:\:!eNULL:\:!AH:\:!3DES:\:@STRENGTH)
 .TP
 \-?
 This help message
@@ -112,7 +98,7 @@ Returns the number of connections to other nodes.
 Returns the proof-of-work difficulty as a multiple of the minimum difficulty.
 .TP
 \fBgetgenerate\fR
-Returns boolean true if server is trying to generate VIBOOK, false otherwise.
+Returns boolean true if server is trying to generate BOOK, false otherwise.
 .TP
 \fBsetgenerate 'generate' ['genproclimit']\fR
 Generation is limited to ['genproclimit'] processors, \-1 is unlimited.
@@ -183,7 +169,7 @@ Returns a list of the last ['count'] transactions for 'account' \- for all accou
 Moves funds between accounts.
 .TP
 \fBsendfrom* <'account'> <'vibookaddress'> <'amount'> ['minconf=1'] ['comment'] ['comment-to']\fR
-Sends amount from account's balance to 'vibookaddress'. This method will fail if there is less than amount VIBOOK with ['minconf'] confirmations in the account's balance (unless account is the empty-string-named default account; it behaves like the *sendtoaddress* method). Returns transaction ID on success.
+Sends amount from account's balance to 'vibookaddress'. This method will fail if there is less than amount BOOK with ['minconf'] confirmations in the account's balance (unless account is the empty-string-named default account; it behaves like the *sendtoaddress* method). Returns transaction ID on success.
 .TP
 \fBsendtoaddress 'vibookaddress' 'amount' ['comment'] ['comment-to']\fR
 Sends amount from the server's available balance to 'vibookaddress'. amount is a real and is rounded to the nearest 0.01. Returns transaction id on success.
@@ -206,4 +192,3 @@ vibook.conf(5)
 This manual page was written by Micah Anderson <micah@debian.org> for the Debian system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 3 or any later version published by the Free Software Foundation.
 
 On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.
-

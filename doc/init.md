@@ -89,7 +89,7 @@ use old versions of Upstart and do not supply the start-stop-daemon uitility.
 Copy vibookd.init to /etc/init.d/vibookd. Test by running "service vibookd start".
 
 Using this script, you can adjust the path and flags to the vibookd program by
-setting the VIBOOKD and FLAGS environment variables in the file
+setting the ViBOOKD and FLAGS environment variables in the file
 /etc/sysconfig/vibookd. You can also use the DAEMONOPTS environment variable here.
 
 5. Auto-respawn

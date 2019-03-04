@@ -1,6 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
-// Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2015-2017 The PIVX developers	
+// Copyright (c) 2018 The ViBOOK developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -19,7 +20,7 @@ BitcoinUnits::BitcoinUnits(QObject* parent) : QAbstractListModel(parent),
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(VIBOOK);
+    unitlist.append(BOOK);
     unitlist.append(mBOOK);
     unitlist.append(uBOOK);
     return unitlist;
@@ -28,7 +29,7 @@ QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 bool BitcoinUnits::valid(int unit)
 {
     switch (unit) {
-    case VIBOOK:
+    case BOOK:
     case mBOOK:
     case uBOOK:
         return true;
@@ -40,12 +41,12 @@ bool BitcoinUnits::valid(int unit)
 QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
-    case VIBOOK:
-        return QString("book");
+    case BOOK:
+        return QString("vibook");
     case mBOOK:
-        return QString("mbook");
+        return QString("mvibook");
     case uBOOK:
-        return QString::fromUtf8("ubook");
+        return QString::fromUtf8("uvibook");
     default:
         return QString("???");
     }
@@ -55,7 +56,7 @@ QString BitcoinUnits::name(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case VIBOOK:
+        case BOOK:
             return QString("BOOK");
         case mBOOK:
             return QString("mBOOK");
@@ -66,7 +67,7 @@ QString BitcoinUnits::name(int unit)
         }
     } else {
         switch (unit) {
-        case VIBOOK:
+        case BOOK:
             return QString("tBOOK");
         case mBOOK:
             return QString("mtBOOK");
@@ -82,18 +83,18 @@ QString BitcoinUnits::description(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case VIBOOK:
-            return QString("VIBOOK");
+        case BOOK:
+            return QString("BOOK");
         case mBOOK:
-            return QString("Milli-VIBOOK (1 / 1" THIN_SP_UTF8 "000)");
+            return QString("Milli-BOOK (1 / 1" THIN_SP_UTF8 "000)");
         case uBOOK:
-            return QString("Micro-VIBOOK (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            return QString("Micro-BOOK (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case VIBOOK:
+        case BOOK:
             return QString("TestBOOKs");
         case mBOOK:
             return QString("Milli-TestBOOK (1 / 1" THIN_SP_UTF8 "000)");
@@ -108,7 +109,7 @@ QString BitcoinUnits::description(int unit)
 qint64 BitcoinUnits::factor(int unit)
 {
     switch (unit) {
-    case VIBOOK:
+    case BOOK:
         return 100000000;
     case mBOOK:
         return 100000;
@@ -122,7 +123,7 @@ qint64 BitcoinUnits::factor(int unit)
 int BitcoinUnits::decimals(int unit)
 {
     switch (unit) {
-    case VIBOOK:
+    case BOOK:
         return 8;
     case mBOOK:
         return 5;

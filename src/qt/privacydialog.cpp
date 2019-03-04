@@ -14,8 +14,9 @@
 #include "sendcoinsentry.h"
 #include "walletmodel.h"
 #include "coincontrol.h"
-#include "zvibookcontroldialog.h"
+#include "zbookcontroldialog.h"
 #include "spork.h"
+#include "askpassphrasedialog.h"
 
 #include <QClipboard>
 #include <QSettings>
@@ -57,15 +58,28 @@ PrivacyDialog::PrivacyDialog(QWidget* parent) : QDialog(parent),
     ui->labelCoinControlAmount->addAction(clipboardAmountAction);
 
     // Denomination labels
-    ui->labelzDenom1Text->setText("Denom. with value <b>1</b>:");
-    ui->labelzDenom2Text->setText("Denom. with value <b>5</b>:");
-    ui->labelzDenom3Text->setText("Denom. with value <b>10</b>:");
-    ui->labelzDenom4Text->setText("Denom. with value <b>50</b>:");
-    ui->labelzDenom5Text->setText("Denom. with value <b>100</b>:");
-    ui->labelzDenom6Text->setText("Denom. with value <b>500</b>:");
-    ui->labelzDenom7Text->setText("Denom. with value <b>1000</b>:");
-    ui->labelzDenom8Text->setText("Denom. with value <b>5000</b>:");
+    ui->labelzDenom1Text->setText(tr("Denom. with value <b>1</b>:"));
+    ui->labelzDenom2Text->setText(tr("Denom. with value <b>5</b>:"));
+    ui->labelzDenom3Text->setText(tr("Denom. with value <b>10</b>:"));
+    ui->labelzDenom4Text->setText(tr("Denom. with value <b>50</b>:"));
+    ui->labelzDenom5Text->setText(tr("Denom. with value <b>100</b>:"));
+    ui->labelzDenom6Text->setText(tr("Denom. with value <b>500</b>:"));
+    ui->labelzDenom7Text->setText(tr("Denom. with value <b>1000</b>:"));
+    ui->labelzDenom8Text->setText(tr("Denom. with value <b>5000</b>:"));
 
+    // AutoMint status
+    ui->label_AutoMintStatus->setText(tr("AutoMint Status:"));
+
+    // Global Supply labels
+    ui->labelZsupplyText1->setText(tr("Denom. <b>1</b>:"));
+    ui->labelZsupplyText5->setText(tr("Denom. <b>5</b>:"));
+    ui->labelZsupplyText10->setText(tr("Denom. <b>10</b>:"));
+    ui->labelZsupplyText50->setText(tr("Denom. <b>50</b>:"));
+    ui->labelZsupplyText100->setText(tr("Denom. <b>100</b>:"));
+    ui->labelZsupplyText500->setText(tr("Denom. <b>500</b>:"));
+    ui->labelZsupplyText1000->setText(tr("Denom. <b>1000</b>:"));
+    ui->labelZsupplyText5000->setText(tr("Denom. <b>5000</b>:"));
+    
     // ViBOOK settings
     QSettings settings;
     if (!settings.contains("nSecurityLevel")){
@@ -131,8 +145,9 @@ void PrivacyDialog::on_pasteButton_clicked()
 
 void PrivacyDialog::on_addressBookButton_clicked()
 {
-    if (!walletModel)
+    if (!walletModel || !walletModel->getOptionsModel())
         return;
+
     AddressBookPage dlg(AddressBookPage::ForSelection, AddressBookPage::SendingTab, this);
     dlg.setModel(walletModel->getAddressTableModel());
     if (dlg.exec()) {
@@ -159,7 +174,7 @@ void PrivacyDialog::on_pushButtonMintzBOOK_clicked()
     // Request unlock if wallet was locked or unlocked for mixing:
     WalletModel::EncryptionStatus encStatus = walletModel->getEncryptionStatus();
     if (encStatus == walletModel->Locked) {
-        WalletModel::UnlockContext ctx(walletModel->requestUnlock(true));
+        WalletModel::UnlockContext ctx(walletModel->requestUnlock(AskPassphraseDialog::Context::Mint_zBOOK, true));
         if (!ctx.isValid()) {
             // Unlock wallet was cancelled
             ui->TEMintStatus->setPlainText(tr("Error: Your wallet is locked. Please enter the wallet passphrase first."));
@@ -211,6 +226,8 @@ void PrivacyDialog::on_pushButtonMintzBOOK_clicked()
 
     }
 
+    ui->TEMintStatus->verticalScrollBar()->setValue(ui->TEMintStatus->verticalScrollBar()->maximum()); // Automatically scroll to end of text
+
     // Available balance isn't always updated, so force it.
     setBalance(walletModel->getBalance(), walletModel->getUnconfirmedBalance(), walletModel->getImmatureBalance(),
                walletModel->getZerocoinBalance(), walletModel->getUnconfirmedZerocoinBalance(), walletModel->getImmatureZerocoinBalance(),
@@ -222,9 +239,6 @@ void PrivacyDialog::on_pushButtonMintzBOOK_clicked()
 
 void PrivacyDialog::on_pushButtonMintReset_clicked()
 {
-    if (!walletModel || !walletModel->getOptionsModel())
-        return;
-
     ui->TEMintStatus->setPlainText(tr("Starting ResetMintZerocoin: rescanning complete blockchain, this will need up to 30 minutes depending on your hardware. \nPlease be patient..."));
     ui->TEMintStatus->repaint ();
 
@@ -233,15 +247,13 @@ void PrivacyDialog::on_pushButtonMintReset_clicked()
     double fDuration = (double)(GetTimeMillis() - nTime)/1000.0;
     ui->TEMintStatus->setPlainText(QString::fromStdString(strResetMintResult) + tr("Duration: ") + QString::number(fDuration) + tr(" sec.\n"));
     ui->TEMintStatus->repaint ();
+    ui->TEMintStatus->verticalScrollBar()->setValue(ui->TEMintStatus->verticalScrollBar()->maximum()); // Automatically scroll to end of text
 
     return;
 }
 
 void PrivacyDialog::on_pushButtonSpentReset_clicked()
 {
-    if (!walletModel || !walletModel->getOptionsModel())
-        return;
-
     ui->TEMintStatus->setPlainText(tr("Starting ResetSpentZerocoin: "));
     ui->TEMintStatus->repaint ();
     int64_t nTime = GetTimeMillis();
@@ -249,6 +261,7 @@ void PrivacyDialog::on_pushButtonSpentReset_clicked()
     double fDuration = (double)(GetTimeMillis() - nTime)/1000.0;
     ui->TEMintStatus->setPlainText(QString::fromStdString(strResetSpentResult) + tr("Duration: ") + QString::number(fDuration) + tr(" sec.\n"));
     ui->TEMintStatus->repaint ();
+    ui->TEMintStatus->verticalScrollBar()->setValue(ui->TEMintStatus->verticalScrollBar()->maximum()); // Automatically scroll to end of text
 
     return;
 }
@@ -268,7 +281,7 @@ void PrivacyDialog::on_pushButtonSpendzBOOK_clicked()
     // Request unlock if wallet was locked or unlocked for mixing:
     WalletModel::EncryptionStatus encStatus = walletModel->getEncryptionStatus();
     if (encStatus == walletModel->Locked || encStatus == walletModel->UnlockedForAnonymizationOnly) {
-        WalletModel::UnlockContext ctx(walletModel->requestUnlock(true));
+        WalletModel::UnlockContext ctx(walletModel->requestUnlock(AskPassphraseDialog::Context::Send_zBOOK, true));
         if (!ctx.isValid()) {
             // Unlock wallet was cancelled
             return;
@@ -281,14 +294,17 @@ void PrivacyDialog::on_pushButtonSpendzBOOK_clicked()
     sendzBOOK();
 }
 
-void PrivacyDialog::on_pushButtonZViBOOKControl_clicked()
+void PrivacyDialog::on_pushButtonZBOOKControl_clicked()
 {
-    ZViBOOKControlDialog* zBOOKControl = new ZViBOOKControlDialog(this);
+    if (!walletModel || !walletModel->getOptionsModel())
+        return;
+
+    ZBOOKControlDialog* zBOOKControl = new ZBOOKControlDialog(this);
     zBOOKControl->setModel(walletModel);
     zBOOKControl->exec();
 }
 
-void PrivacyDialog::setZViBOOKControlLabels(int64_t nAmount, int nQuantity)
+void PrivacyDialog::setZBOOKControlLabels(int64_t nAmount, int nQuantity)
 {
     ui->labelzBOOKSelected_int->setText(QString::number(nAmount));
     ui->labelQuantitySelected_int->setText(QString::number(nQuantity));
@@ -343,7 +359,7 @@ void PrivacyDialog::sendzBOOK()
 
     if(!fWholeNumber && fMintChange){
         QString strFeeWarning = "You've entered an amount with fractional digits and want the change to be converted to Zerocoin.<br /><br /><b>";
-        strFeeWarning += QString::number(dzFee, 'f', 8) + " VIBOOK </b>will be added to the standard transaction fees!<br />";
+        strFeeWarning += QString::number(dzFee, 'f', 8) + " BOOK </b>will be added to the standard transaction fees!<br />";
         QMessageBox::StandardButton retval = QMessageBox::question(this, tr("Confirm additional Fees"),
             strFeeWarning,
             QMessageBox::Yes | QMessageBox::Cancel,
@@ -398,8 +414,8 @@ void PrivacyDialog::sendzBOOK()
 
     // use mints from zBOOK selector if applicable
     vector<CZerocoinMint> vMintsSelected;
-    if (!ZViBOOKControlDialog::listSelectedMints.empty()) {
-        vMintsSelected = ZViBOOKControlDialog::GetSelectedMints();
+    if (!ZBOOKControlDialog::listSelectedMints.empty()) {
+        vMintsSelected = ZBOOKControlDialog::GetSelectedMints();
     }
 
     // Spend zBOOK
@@ -431,11 +447,23 @@ void PrivacyDialog::sendzBOOK()
         }
         ui->zBOOKpayAmount->setFocus();
         ui->TEMintStatus->repaint();
+        ui->TEMintStatus->verticalScrollBar()->setValue(ui->TEMintStatus->verticalScrollBar()->maximum()); // Automatically scroll to end of text
         return;
     }
 
-    // Clear zvibook selector in case it was used
-    ZViBOOKControlDialog::listSelectedMints.clear();
+    if (walletModel && walletModel->getAddressTableModel()) {
+        // If zBOOK was spent successfully update the addressbook with the label
+        std::string labelText = ui->addAsLabel->text().toStdString();
+        if (!labelText.empty())
+            walletModel->updateAddressBookLabels(address.Get(), labelText, "send");
+        else
+            walletModel->updateAddressBookLabels(address.Get(), "(no label)", "send");
+    }
+
+    // Clear zbook selector in case it was used
+    ZBOOKControlDialog::listSelectedMints.clear();
+    ui->labelzBOOKSelected_int->setText(QString("0"));
+    ui->labelQuantitySelected_int->setText(QString("0"));
 
     // Some statistics for entertainment
     QString strStats = "";
@@ -451,7 +479,7 @@ void PrivacyDialog::sendzBOOK()
 
     CAmount nValueOut = 0;
     for (const CTxOut& txout: wtxNew.vout) {
-        strStats += tr("value out: ") + FormatMoney(txout.nValue).c_str() + " ViBOOK, ";
+        strStats += tr("value out: ") + FormatMoney(txout.nValue).c_str() + " BOOK, ";
         nValueOut += txout.nValue;
 
         strStats += tr("address: ");
@@ -476,6 +504,7 @@ void PrivacyDialog::sendzBOOK()
 
     ui->TEMintStatus->setPlainText(strReturn);
     ui->TEMintStatus->repaint();
+    ui->TEMintStatus->verticalScrollBar()->setValue(ui->TEMintStatus->verticalScrollBar()->maximum()); // Automatically scroll to end of text
 }
 
 void PrivacyDialog::on_payTo_textChanged(const QString& address)
@@ -498,6 +527,9 @@ void PrivacyDialog::coinControlClipboardAmount()
 // Coin Control: button inputs -> show actual coin control dialog
 void PrivacyDialog::coinControlButtonClicked()
 {
+    if (!walletModel || !walletModel->getOptionsModel())
+        return;
+
     CoinControlDialog dlg;
     dlg.setModel(walletModel);
     dlg.exec();
@@ -574,7 +606,7 @@ void PrivacyDialog::setBalance(const CAmount& balance, const CAmount& unconfirme
             mapUnconfirmed.at(mint.GetDenomination())++;
         }
         else {
-            // After a denomination is confirmed it might still be immature because < 1 of the same denomination were minted after it
+            // After a denomination is confirmed it might still be immature because < 3 of the same denomination were minted after it
             CBlockIndex *pindex = chainActive[mint.GetHeight() + 1];
             int nHeight2CheckpointsDeep = nBestHeight - (nBestHeight % 10) - 20;
             int nMintsAdded = 0;
@@ -657,6 +689,56 @@ void PrivacyDialog::setBalance(const CAmount& balance, const CAmount& unconfirme
     ui->labelzAvailableAmount->setText(QString::number(zerocoinBalance/COIN) + QString(" zBOOK "));
     ui->labelzAvailableAmount_2->setText(QString::number(matureZerocoinBalance/COIN) + QString(" zBOOK "));
     ui->labelzBOOKAmountValue->setText(BitcoinUnits::floorHtmlWithUnit(nDisplayUnit, balance - immatureBalance - nLockedBalance, false, BitcoinUnits::separatorAlways));
+
+    // Display AutoMint status
+    QString strAutomintStatus = tr("AutoMint Status:");
+
+    if (pwalletMain->isZeromintEnabled ()) {
+       strAutomintStatus += tr(" <b>enabled</b>.");
+    }
+    else {
+       strAutomintStatus += tr(" <b>disabled</b>.");
+    }
+
+    strAutomintStatus += tr(" Configured target percentage: <b>") + QString::number(pwalletMain->getZeromintPercentage()) + "%</b>";
+    ui->label_AutoMintStatus->setText(strAutomintStatus);
+
+    // Display global supply
+    ui->labelZsupplyAmount->setText(QString::number(chainActive.Tip()->GetZerocoinSupply()/COIN) + QString(" <b>zBOOK </b> "));
+    for (auto denom : libzerocoin::zerocoinDenomList) {
+        int64_t nSupply = chainActive.Tip()->mapZerocoinSupply.at(denom);
+        QString strSupply = QString::number(nSupply) + " x " + QString::number(denom) + " = <b>" +
+                            QString::number(nSupply*denom) + " zBOOK </b> ";
+        switch (denom) {
+            case libzerocoin::CoinDenomination::ZQ_ONE:
+                ui->labelZsupplyAmount1->setText(strSupply);
+                break;
+            case libzerocoin::CoinDenomination::ZQ_FIVE:
+                ui->labelZsupplyAmount5->setText(strSupply);
+                break;
+            case libzerocoin::CoinDenomination::ZQ_TEN:
+                ui->labelZsupplyAmount10->setText(strSupply);
+                break;
+            case libzerocoin::CoinDenomination::ZQ_FIFTY:
+                ui->labelZsupplyAmount50->setText(strSupply);
+                break;
+            case libzerocoin::CoinDenomination::ZQ_ONE_HUNDRED:
+                ui->labelZsupplyAmount100->setText(strSupply);
+                break;
+            case libzerocoin::CoinDenomination::ZQ_FIVE_HUNDRED:
+                ui->labelZsupplyAmount500->setText(strSupply);
+                break;
+            case libzerocoin::CoinDenomination::ZQ_ONE_THOUSAND:
+                ui->labelZsupplyAmount1000->setText(strSupply);
+                break;
+            case libzerocoin::CoinDenomination::ZQ_FIVE_THOUSAND:
+                ui->labelZsupplyAmount5000->setText(strSupply);
+                break;
+            default:
+                // Error Case: don't update display
+                break;
+        }
+    }
 }
 
 void PrivacyDialog::updateDisplayUnit()

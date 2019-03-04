@@ -172,7 +172,7 @@
         <translation>Подтверждение шифрования кошелька</translation>
     </message>
     <message>
-        <source>ViBOOK will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your VIBOOKs from being stolen by malware infecting your computer.</source>
+        <source>ViBOOK will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ATRs from being stolen by malware infecting your computer.</source>
         <translation>ViBOOK сейчас закроется, чтобы завершить процесс шифрования. Помните, что шифрование вашего кошелька не может полностью защитить ваши ViBOOK от кражи с использованием вредоносного ПО.</translation>
     </message>
     <message>
@@ -180,8 +180,8 @@
         <translation>Вы действительно хотите зашифровать свой кошелек?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VIBOOK&lt;/b&gt;!</source>
-        <translation>Внимание: если вы зашифруете свой кошелёк и потеряете от него пароль, то вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ СВОИ VIBOOK&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR ATR&lt;/b&gt;!</source>
+        <translation>Внимание: если вы зашифруете свой кошелёк и потеряете от него пароль, то вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ СВОИ ATR&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -606,14 +606,6 @@
         <translation>Запросить платежи (генерирует QR-код и ViBOOK: URI)</translation>
     </message>
     <message>
-        <source>&amp;Privacy</source>
-        <translation>&amp;Конфиденциальность</translation>
-    </message>
-    <message>
-        <source>Privacy Action for zBOOK and Obfuscation</source>
-        <translation>Конфиденциальное действие и обфускация</translation>
-    </message>
-    <message>
         <source>&amp;Masternodes</source>
         <translation>&amp;Мастерноды</translation>
     </message>
@@ -805,14 +797,6 @@ MultiSend: %1</translation>
         <translation>Обзор блокчейна</translation>
     </message>
     <message>
-        <source>Back</source>
-        <translation>Назад</translation>
-    </message>
-    <message>
-        <source>Forward</source>
-        <translation>вперед</translation>
-    </message>
-    <message>
         <source>Address / Block / Transaction</source>
         <translation>Адрес / Блок / Транзакция</translation>
     </message>
@@ -831,6 +815,10 @@ MultiSend: %1</translation>
 </context>
 <context>
     <name>ClientModel</name>
+    <message>
+        <source>Total: %1 (OBF compatible: %2 / Enabled: %3)</source>
+        <translation>Всего: %1 (OBF совместимые: %2 / Включеные: %3)</translation>
+    </message>
     <message>
         <source>Network Alert</source>
         <translation>Сетевое предупреждение</translation>
@@ -1516,32 +1504,32 @@ Please check the address and try again.</source>
         <translation>Выберите уровень конфиденциальности.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 VIBOOK</source>
-        <translation>Используйте 2 разные мастерноды для смешивания средств до 10000 VIBOOK</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 ATR</source>
+        <translation>Используйте 2 разные мастерноды для смешивания средств до 10000 ATR</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 VIBOOK</source>
-        <translation>Используйте 8 разных мастернод для смешивания средств до 10000 VIBOOK</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 ATR</source>
+        <translation>Используйте 8 разных мастернод для смешивания средств до 10000 ATR</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Используйте 16 разных мастернод</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 VIBOOK to anonymize 10000 VIBOOK</source>
-        <translation>Этот вариант является самым быстрым и будет стоить порядка ~0.025 VIBOOK для анонимизации 10000 VIBOOK</translation>
+        <source>This option is the quickest and will cost about ~0.025 ATR to anonymize 10000 ATR</source>
+        <translation>Этот вариант является самым быстрым и будет стоить порядка ~0.025 ATR для анонимизации 10000 ATR</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 VIBOOK to anonymize 10000 VIBOOK</source>
-        <translation>Это средний по скорости вариант и он будет стоить около 0.05 VIBOOK для анонимизации 10000 VIBOOK</translation>
+        <source>This option is moderately fast and will cost about 0.05 ATR to anonymize 10000 ATR</source>
+        <translation>Это средний по скорости вариант и он будет стоить около 0.05 ATR для анонимизации 10000 ATR</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Это самый медленный и безопасный вариант. Максимальная анонимность стоит</translation>
     </message>
     <message>
-        <source>0.1 VIBOOK per 10000 VIBOOK you anonymize.</source>
-        <translation>0.1 VIBOOK за 10000 VIBOOK которые вы собираетесь анонимизировать.</translation>
+        <source>0.1 ATR per 10000 ATR you anonymize.</source>
+        <translation>0.1 ATR за 10000 ATR которые вы собираетесь анонимизировать.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1684,18 +1672,6 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>Карта порта, использующего &amp;UPnP</translation>
     </message>
     <message>
-        <source>Percentage of incoming VIBOOK which get automatically converted to zBOOK via Zerocoin Protocol (min: 10%)</source>
-        <translation>Процент приходящих VIBOOK, которые автоматически конвертируются в zBOOK благодаря Zerocoin протоколу (min: 10%)</translation>
-    </message>
-    <message>
-        <source>Percentage of autominted zBOOK</source>
-        <translation>Процент  авточеканненых zBOOK</translation>
-    </message>
-    <message>
-        <source>Preferred Automint zBOOK Denomination</source>
-        <translation>Предпочитаемый номинал авточеканной  монеты  zBOOK</translation>
-    </message>
-    <message>
         <source>Connect to the ViBOOK network through a SOCKS5 proxy.</source>
         <translation>Подключиться к сети ViBOOK через SOCKS5 прокси.</translation>
     </message>
@@ -1788,10 +1764,6 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>&amp;Отмена</translation>
     </message>
     <message>
-        <source>I don't care</source>
-        <translation>Мне не важно</translation>
-    </message>
-    <message>
         <source>default</source>
         <translation>по-умолчанию</translation>
     </message>
@@ -1825,10 +1797,6 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
     <message>
         <source>Form</source>
         <translation>Вид</translation>
-    </message>
-    <message>
-        <source>VIBOOK Balances</source>
-        <translation>Баланс VIBOOK</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1889,22 +1857,6 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
     <message>
         <source>Spendable:</source>
         <translation>Расходуемый:</translation>
-    </message>
-    <message>
-        <source>VIBOOK:</source>
-        <translation>VIBOOK:</translation>
-    </message>
-    <message>
-        <source>zBOOK:</source>
-        <translation>zBOOK:</translation>
-    </message>
-    <message>
-        <source>0 %</source>
-        <translation>0 %</translation>
-    </message>
-    <message>
-        <source>Zerocoin Balance</source>
-        <translation>Баланс Zerocoin </translation>
     </message>
     <message>
         <source>Recent transactions</source>
@@ -2020,32 +1972,12 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
 <context>
     <name>PrivacyDialog</name>
     <message>
-        <source>VIBOOK which were anonymized via Zerocin Protocol</source>
-        <translation>VIBOOK, который был анонимно использован через Zerocoin протокол</translation>
-    </message>
-    <message>
-        <source>Zerocoin Actions:</source>
-        <translation>Действия Zerocoin </translation>
-    </message>
-    <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the ViBOOK network after a connection is established, but this process has not completed yet.</source>
         <translation>Возможно отображаемая информация устарела. Ваш кошелек автоматически синхронизируется с сетью ViBOOK после установки соединения, но этот процесс еще не завершен. </translation>
     </message>
     <message>
-        <source>Enter an amount of Phr to convert to zPhr</source>
-        <translation>Введите сумму в Phr для  конвертации в zPhr</translation>
-    </message>
-    <message>
-        <source>Mint Zerocoin</source>
-        <translation>Создать Zerocoin</translation>
-    </message>
-    <message>
         <source>0</source>
         <translation>0</translation>
-    </message>
-    <message>
-        <source>Available for Minting:</source>
-        <translation>Доступный для чеканки</translation>
     </message>
     <message>
         <source>Reset</source>
@@ -2074,74 +2006,6 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
     <message>
         <source>Alt+P</source>
         <translation>Alt+P</translation>
-    </message>
-    <message>
-        <source>Available Zerocoin  Balance:</source>
-        <translation>Доступный Баланс в Zerocoin </translation>
-    </message>
-    <message>
-        <source>Denominations with value 1:</source>
-        <translation>Номинал со значением 1:</translation>
-    </message>
-    <message>
-        <source>Denom. with value 1:</source>
-        <translation>Номинал со значением 1:</translation>
-    </message>
-    <message>
-        <source>Denominations with value 5:</source>
-        <translation>Номинал со значением 5:</translation>
-    </message>
-    <message>
-        <source>Denom. with value 5:</source>
-        <translation>Номинал со значением 5:</translation>
-    </message>
-    <message>
-        <source>Denominations with value 10:</source>
-        <translation>Номинал со значением 10:</translation>
-    </message>
-    <message>
-        <source>Denom. with value 10:</source>
-        <translation>Номинал со значением 10:</translation>
-    </message>
-    <message>
-        <source>Denominations with value 50:</source>
-        <translation>Номинал со значением 50:</translation>
-    </message>
-    <message>
-        <source>Denom. with value 50:</source>
-        <translation>Номинал со значением 50:</translation>
-    </message>
-    <message>
-        <source>Denominations with value 100:</source>
-        <translation>Номинал со значением 100:</translation>
-    </message>
-    <message>
-        <source>Denom. with value 100:</source>
-        <translation>Номинал со значением 100:</translation>
-    </message>
-    <message>
-        <source>Denominations with value 500:</source>
-        <translation>Номинал со значением 500:</translation>
-    </message>
-    <message>
-        <source>Denom. with value 500:</source>
-        <translation>Номинал со значением 500:</translation>
-    </message>
-    <message>
-        <source>Denominations with value 1000:</source>
-        <translation>Номинал со значением 1000:</translation>
-    </message>
-    <message>
-        <source>Denom. with value 1000:</source>
-        <translation>Номинал со значением 1000:</translation>
-    </message>
-    <message>
-        <source>Denominations with value 5000:</source>
-        <translation>Номинал со значением 5000:</translation>
-    </message>
-    <message>
-        <source>Denom. with value 5000:</source>
-        <translation>Номинал со значением 5000:</translation>
     </message>
     <message>
         <source>Priority:</source>
@@ -2706,8 +2570,8 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>Изменить:</translation>
     </message>
     <message>
-        <source>0 VIBOOK</source>
-        <translation>0 VIBOOK</translation>
+        <source>0 ATR</source>
+        <translation>0 ATR</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -3198,7 +3062,7 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
     </message>
     </context>
 <context>
-    <name>ZPhrControlDialog</name>
+    <name>ZATRControlDialog</name>
     <message>
         <source>0</source>
         <translation>0</translation>
@@ -3239,8 +3103,12 @@ https://www.transifex.com/vibook-project/vibook-project-translations</translatio
         <translation>Copyright (C) 2014-%i Разработчики Dash Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The ViBOOK Core Developers</source>
+        <source>Copyright (C) 2015-%i The PIVX Core Developers</source>
         <translation>Copyright (C) 2015-%i Разработчики ViBOOK Core</translation>
+    </message>
+    <message>
+        <source>Copyright (C) 2018-%i The ViBOOK Core Developers</source>
+        <translation>Copyright (C) 2018-%i The ViBOOK Core Developers</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>

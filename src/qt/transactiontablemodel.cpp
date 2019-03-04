@@ -85,6 +85,7 @@ public:
 
     /* Update our model of the wallet incrementally, to synchronize our model of the wallet
        with that of the core.
+
        Call with transaction that was added, removed or changed.
      */
     void updateWallet(const uint256& hash, int status, bool showTransaction)
@@ -355,15 +356,15 @@ QString TransactionTableModel::formatTxType(const TransactionRecord* wtx) const
     case TransactionRecord::Obfuscated:
         return tr("Obfuscated");
     case TransactionRecord::ZerocoinMint:
-        return tr("Converted ViBOOK to zBOOK");
+        return tr("Converted BOOK to zBOOK");
     case TransactionRecord::ZerocoinSpend:
         return tr("Spent zBOOK");
     case TransactionRecord::RecvFromZerocoinSpend:
-        return tr("Received ViBOOK from zBOOK");
+        return tr("Received BOOK from zBOOK");
     case TransactionRecord::ZerocoinSpend_Change_zBOOK:
         return tr("Minted Change as zBOOK from zBOOK Spend");
     case TransactionRecord::ZerocoinSpend_FromMe:
-        return tr("Converted zBOOK to ViBOOK");
+        return tr("Converted zBOOK to BOOK");
 
     default:
         return QString();
@@ -566,8 +567,12 @@ QVariant TransactionTableModel::data(const QModelIndex& index, int role) const
     case Qt::TextAlignmentRole:
         return column_alignments[index.column()];
     case Qt::ForegroundRole:
-        // Non-confirmed (but not immature) as transactions are grey
-        if (!rec->status.countsForBalance && rec->status.status != TransactionStatus::Immature) {
+        // Conflicted, most probably orphaned
+        if (rec->status.status == TransactionStatus::Conflicted || rec->status.status == TransactionStatus::NotAccepted) {
+            return COLOR_CONFLICTED;
+        }
+        // Unconfimed or immature
+        if ((rec->status.status == TransactionStatus::Unconfirmed) || (rec->status.status == TransactionStatus::Immature)) {
             return COLOR_UNCONFIRMED;
         }
         if (index.column() == Amount && (rec->credit + rec->debit) < 0) {

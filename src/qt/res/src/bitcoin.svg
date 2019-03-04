@@ -12,10 +12,10 @@
 
 	<!-- nice shadow with alpha 0.35 -->
 	<filter id="dropShadowAlpha">
-		<feColorMatrix result="matrixOut" in="SourceAlpha" type="saturate"
+		<feColorMbookix result="mbookixOut" in="SourceAlpha" type="saturate"
 	      values="0.1" />
-		<feGaussianBlur in="matrixOut" result="blur-out" stdDeviation="6" />
-		<feColorMatrix in="blur-out" result="color-out" type="matrix"
+		<feGaussianBlur in="mbookixOut" result="blur-out" stdDeviation="6" />
+		<feColorMbookix in="blur-out" result="color-out" type="mbookix"
 		      values="0 0 0 0   0
 		              0 0 0 0   0 
 		              0 0 0 0   0 
